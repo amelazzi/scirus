@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/torpics.gmf/model/default.genmodel
+gmf_dashboard/domainModel=platform\:/resource/torpics.gmf/model/default.ecore
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/torpics.gmf/model/default.gmftool

@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="entities_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="entities_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="entities.diagram.part.DefaultDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/EntitiesDiagramFile.gif"
+         extensions="entities_diagram"
+         default="true"
+         class="entities.diagram.part.DefaultDiagramEditor"
+         matchingStrategy="entities.diagram.part.DefaultMatchingStrategy"
+         contributorClass="entities.diagram.part.DefaultDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="entities.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/EntitiesDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="entities.diagram.part.DefaultCreationWizard"
+  	     id="entities.diagram.part.DefaultCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="torpics.gmf.diagram.InitDiagram"
+            nameFilter="*.entities"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="entities.diagram.part.DefaultInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="torpics.gmf.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="DefaultPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="entities.diagram.part.DefaultDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="DefaultPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="entities.diagram.part.DefaultDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="DefaultRender">
+         <Priority name="Lowest"/>
+         <ViewId id="entities.diagram.part.DefaultDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="entities.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="torpics.gmf.diagram.general"
+            name="%prefpage.torpics.gmf.diagram.general"
+            class="entities.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="torpics.gmf.diagram.appearance"
+            name="%prefpage.torpics.gmf.diagram.appearance"
+            category="torpics.gmf.diagram.general"
+            class="entities.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="torpics.gmf.diagram.connections"
+            name="%prefpage.torpics.gmf.diagram.connections"
+            category="torpics.gmf.diagram.general"
+            class="entities.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="torpics.gmf.diagram.printing"
+            name="%prefpage.torpics.gmf.diagram.printing"
+            category="torpics.gmf.diagram.general"
+            class="entities.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="torpics.gmf.diagram.rulersAndGrid"
+            name="%prefpage.torpics.gmf.diagram.rulersAndGrid"
+            category="torpics.gmf.diagram.general"
+            class="entities.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="torpics.gmf.diagram"
+            labelProvider="entities.diagram.sheet.DefaultSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="torpics.gmf.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="torpics.gmf.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="entities.diagram.sheet.DefaultPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="entities.diagram.navigator.DefaultAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="entities.diagram.providers.DefaultViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Default"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="entities.diagram.providers.DefaultEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Default"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001,5002,5003,5004"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value=""/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfNetworkEditPart">
+         <Priority name="Lowest"/>
+         <object class="entities.diagram.edit.parts.NetworkEditPart" id="Network_1000"/>
+         <context elements="Network_1000"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfDataBaseEditPart">
+         <Priority name="Lowest"/>
+         <object class="entities.diagram.edit.parts.DataBaseEditPart" id="DataBase_2001"/>
+         <context elements="DataBase_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfCapteurEditPart">
+         <Priority name="Lowest"/>
+         <object class="entities.diagram.edit.parts.CapteurEditPart" id="Capteur_2002"/>
+         <context elements="Capteur_2002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfGateWayEditPart">
+         <Priority name="Lowest"/>
+         <object class="entities.diagram.edit.parts.GateWayEditPart" id="GateWay_2003"/>
+         <context elements="GateWay_2003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfCloudEditPart">
+         <Priority name="Lowest"/>
+         <object class="entities.diagram.edit.parts.CloudEditPart" id="Cloud_2004"/>
+         <context elements="Cloud_2004"/>
+      </modelingAssistantProvider>
+      
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="entities.diagram.providers.DefaultIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="entities.diagram.providers.DefaultParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="torpics">
+         <metamodelType
+               id="torpics.gmf.diagram.Network_1000"
+               name="%metatype.name.Network_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Network"
+               edithelper="entities.diagram.edit.helpers.NetworkEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="torpics">
+         <metamodelType
+               id="torpics.gmf.diagram.DataBase_2001"
+               name="%metatype.name.DataBase_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DataBase"
+               edithelper="entities.diagram.edit.helpers.DataBaseEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="torpics">
+         <metamodelType
+               id="torpics.gmf.diagram.Capteur_2002"
+               name="%metatype.name.Capteur_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Capteur"
+               edithelper="entities.diagram.edit.helpers.CapteurEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="torpics">
+         <metamodelType
+               id="torpics.gmf.diagram.GateWay_2003"
+               name="%metatype.name.GateWay_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="GateWay"
+               edithelper="entities.diagram.edit.helpers.GateWayEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="torpics">
+         <metamodelType
+               id="torpics.gmf.diagram.Cloud_2004"
+               name="%metatype.name.Cloud_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Cloud"
+               edithelper="entities.diagram.edit.helpers.CloudEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="torpics">
+         <metamodelType
+               id="torpics.gmf.diagram.Link_4001"
+               name="%metatype.name.Link_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Link"
+               edithelper="entities.diagram.edit.helpers.LinkEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="torpics.gmf.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="torpics.gmf.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="torpics.gmf.diagram.TypeContext">
+         <elementType ref="torpics.gmf.diagram.Network_1000"/>
+         <elementType ref="torpics.gmf.diagram.DataBase_2001"/>
+         <elementType ref="torpics.gmf.diagram.Capteur_2002"/>
+         <elementType ref="torpics.gmf.diagram.GateWay_2003"/>
+         <elementType ref="torpics.gmf.diagram.Cloud_2004"/>
+         <elementType ref="torpics.gmf.diagram.Link_4001"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="torpics.gmf.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="torpics.gmf.diagram"
+           properties="isURIEditorInput"
+           class="entities.diagram.part.DefaultUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="torpics.gmf.diagram.resourceContent"/>
+			<contentExtension pattern="torpics.gmf.diagram.domainResourceContent"/>
+            <contentExtension pattern="torpics.gmf.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="torpics.gmf.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="torpics.gmf.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="entities.diagram.navigator.DefaultNavigatorContentProvider" 
+            labelProvider="entities.diagram.navigator.DefaultNavigatorLabelProvider"
+            icon="icons/obj16/EntitiesDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="entities_diagram"/>
+               </and>
+               <instanceof value="entities.diagram.navigator.DefaultAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="entities.diagram.navigator.DefaultAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="torpics.gmf.diagram.navigatorSorter" 
+               class="entities.diagram.navigator.DefaultNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="entities_diagram"/>
+                  </and>
+                  <instanceof value="entities.diagram.navigator.DefaultAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="torpics.gmf.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="entities.diagram.navigator.DefaultDomainNavigatorContentProvider" 
+            labelProvider="entities.diagram.navigator.DefaultDomainNavigatorLabelProvider"
+            icon="icons/obj16/EntitiesDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="entities"/>
+               </and>
+               <instanceof value="entities.diagram.navigator.DefaultDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="entities.diagram.navigator.DefaultDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="torpics.gmf.diagram.navigatorActionProvider"
+            class="entities.diagram.navigator.DefaultNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="entities.diagram.navigator.DefaultAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="torpics.gmf.diagram.navigatorLinkHelper"
+            class="entities.diagram.navigator.DefaultNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="torpics.gmf.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="entities.diagram.navigator.DefaultAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="entities.diagram.part.DefaultDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="entities.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="entities.diagram.updateDiagram"
+         contextId="entities.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="torpics.gmf.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="entities.diagram.part.DefaultDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="entities.diagram.edit.parts.NetworkEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="entities.diagram.part.DefaultDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="torpics.gmf.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="entities.diagram.part.DefaultDiagramEditorID"
+         defaultHandler="entities.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

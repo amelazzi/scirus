@@ -1,0 +1,27 @@
+package entities.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		entities.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+entities.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+entities.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+entities.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+entities.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return entities.diagram.part.DefaultDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

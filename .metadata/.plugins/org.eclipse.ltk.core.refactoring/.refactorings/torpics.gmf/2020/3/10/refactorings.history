@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 9 elements from project &apos;torpics.gmf&apos;&#x0D;&#x0A;- Original project: &apos;torpics.gmf&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     default.genmodel&#x0D;&#x0A;     default.gmfgen&#x0D;&#x0A;     default.gmfgraph&#x0D;&#x0A;     default.gmfmap&#x0D;&#x0A;     default.gmftool&#x0D;&#x0A;     default.trace&#x0D;&#x0A;     build.properties&#x0D;&#x0A;     plugin.properties&#x0D;&#x0A;     plugin.xml" description="Delete elements" element1="model/default.gmfgraph" element2="model/default.gmftool" element3="model/default.trace" element4="build.properties" element5="plugin.properties" element6="model/default.genmodel" element7="plugin.xml" element8="model/default.gmfmap" element9="model/default.gmfgen" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="9" stamp="1583688363282" subPackages="false" version="1.0"/>
+</session>

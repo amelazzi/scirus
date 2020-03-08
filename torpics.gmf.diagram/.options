@@ -1,0 +1,7 @@
+# Tracing options for the torpics.gmf.diagram plug-in
+
+# Common issues
+torpics.gmf.diagram/debug=false
+
+# Visual IDs
+torpics.gmf.diagram/debug/visualID=false
