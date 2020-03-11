@@ -1,0 +1,15 @@
+package entities.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class DefaultBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}

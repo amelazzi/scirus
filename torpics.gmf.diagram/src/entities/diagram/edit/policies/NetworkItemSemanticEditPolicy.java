@@ -10,6 +10,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
 import entities.diagram.edit.commands.CapteurCreateCommand;
 import entities.diagram.edit.commands.CloudCreateCommand;
 import entities.diagram.edit.commands.DataBaseCreateCommand;
+import entities.diagram.edit.commands.EntryFunctionCreateCommand;
 import entities.diagram.edit.commands.GateWayCreateCommand;
 import entities.diagram.providers.DefaultElementTypes;
 
@@ -30,17 +31,20 @@ public class NetworkItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (DefaultElementTypes.DataBase_2001 == req.getElementType()) {
-			return getGEFWrapper(new DataBaseCreateCommand(req));
-		}
-		if (DefaultElementTypes.Capteur_2002 == req.getElementType()) {
+		if (DefaultElementTypes.Capteur_2001 == req.getElementType()) {
 			return getGEFWrapper(new CapteurCreateCommand(req));
 		}
-		if (DefaultElementTypes.GateWay_2003 == req.getElementType()) {
+		if (DefaultElementTypes.DataBase_2002 == req.getElementType()) {
+			return getGEFWrapper(new DataBaseCreateCommand(req));
+		}
+		if (DefaultElementTypes.Cloud_2003 == req.getElementType()) {
+			return getGEFWrapper(new CloudCreateCommand(req));
+		}
+		if (DefaultElementTypes.GateWay_2004 == req.getElementType()) {
 			return getGEFWrapper(new GateWayCreateCommand(req));
 		}
-		if (DefaultElementTypes.Cloud_2004 == req.getElementType()) {
-			return getGEFWrapper(new CloudCreateCommand(req));
+		if (DefaultElementTypes.EntryFunction_2005 == req.getElementType()) {
+			return getGEFWrapper(new EntryFunctionCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

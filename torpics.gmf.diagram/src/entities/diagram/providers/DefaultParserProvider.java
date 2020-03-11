@@ -12,11 +12,13 @@ import org.eclipse.gmf.runtime.common.ui.services.parser.ParserService;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.parsers.EnumParser;
 
 import entities.EntitiesPackage;
 import entities.diagram.edit.parts.CapteurNameEditPart;
 import entities.diagram.edit.parts.CloudNameEditPart;
 import entities.diagram.edit.parts.DataBaseNameEditPart;
+import entities.diagram.edit.parts.EntryFunctionTypeEditPart;
 import entities.diagram.edit.parts.GateWayNameEditPart;
 import entities.diagram.edit.parts.LinkNameEditPart;
 import entities.diagram.parsers.MessageFormatParser;
@@ -31,73 +33,91 @@ public class DefaultParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser dataBaseName_5001Parser;
+	private IParser capteurName_5001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getDataBaseName_5001Parser() {
-		if (dataBaseName_5001Parser == null) {
+	private IParser getCapteurName_5001Parser() {
+		if (capteurName_5001Parser == null) {
 			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
 					.getDevice_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			dataBaseName_5001Parser = parser;
+			capteurName_5001Parser = parser;
 		}
-		return dataBaseName_5001Parser;
+		return capteurName_5001Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser capteurName_5002Parser;
+	private IParser dataBaseName_5002Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCapteurName_5002Parser() {
-		if (capteurName_5002Parser == null) {
+	private IParser getDataBaseName_5002Parser() {
+		if (dataBaseName_5002Parser == null) {
 			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
 					.getDevice_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			capteurName_5002Parser = parser;
+			dataBaseName_5002Parser = parser;
 		}
-		return capteurName_5002Parser;
+		return dataBaseName_5002Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser gateWayName_5003Parser;
+	private IParser cloudName_5003Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getGateWayName_5003Parser() {
-		if (gateWayName_5003Parser == null) {
+	private IParser getCloudName_5003Parser() {
+		if (cloudName_5003Parser == null) {
 			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
 					.getDevice_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			gateWayName_5003Parser = parser;
+			cloudName_5003Parser = parser;
 		}
-		return gateWayName_5003Parser;
+		return cloudName_5003Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser cloudName_5004Parser;
+	private IParser gateWayName_5004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCloudName_5004Parser() {
-		if (cloudName_5004Parser == null) {
+	private IParser getGateWayName_5004Parser() {
+		if (gateWayName_5004Parser == null) {
 			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
 					.getDevice_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			cloudName_5004Parser = parser;
+			gateWayName_5004Parser = parser;
 		}
-		return cloudName_5004Parser;
+		return gateWayName_5004Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser entryFunctionType_5005Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getEntryFunctionType_5005Parser() {
+		if (entryFunctionType_5005Parser == null) {
+			EAttribute editableFeature = EntitiesPackage.eINSTANCE
+					.getEntryFunction_Type();
+			EnumParser parser = new EnumParser(editableFeature);
+			entryFunctionType_5005Parser = parser;
+		}
+		return entryFunctionType_5005Parser;
 	}
 
 	/**
@@ -123,14 +143,17 @@ public class DefaultParserProvider extends AbstractProvider implements
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case DataBaseNameEditPart.VISUAL_ID:
-			return getDataBaseName_5001Parser();
 		case CapteurNameEditPart.VISUAL_ID:
-			return getCapteurName_5002Parser();
-		case GateWayNameEditPart.VISUAL_ID:
-			return getGateWayName_5003Parser();
+			return getCapteurName_5001Parser();
+		case DataBaseNameEditPart.VISUAL_ID:
+			return getDataBaseName_5002Parser();
 		case CloudNameEditPart.VISUAL_ID:
-			return getCloudName_5004Parser();
+			return getCloudName_5003Parser();
+		case GateWayNameEditPart.VISUAL_ID:
+			return getGateWayName_5004Parser();
+
+		case EntryFunctionTypeEditPart.VISUAL_ID:
+			return getEntryFunctionType_5005Parser();
 		case LinkNameEditPart.VISUAL_ID:
 			return getLinkName_6001Parser();
 		}

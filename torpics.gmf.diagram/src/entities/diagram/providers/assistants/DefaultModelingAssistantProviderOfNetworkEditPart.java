@@ -20,11 +20,12 @@ public class DefaultModelingAssistantProviderOfNetworkEditPart extends
 	 */
 	@Override
 	public List<IElementType> getTypesForPopupBar(IAdaptable host) {
-		List<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(DefaultElementTypes.DataBase_2001);
-		types.add(DefaultElementTypes.Capteur_2002);
-		types.add(DefaultElementTypes.GateWay_2003);
-		types.add(DefaultElementTypes.Cloud_2004);
+		List<IElementType> types = new ArrayList<IElementType>(5);
+		types.add(DefaultElementTypes.Capteur_2001);
+		types.add(DefaultElementTypes.DataBase_2002);
+		types.add(DefaultElementTypes.Cloud_2003);
+		types.add(DefaultElementTypes.GateWay_2004);
+		types.add(DefaultElementTypes.EntryFunction_2005);
 		return types;
 	}
 

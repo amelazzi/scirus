@@ -12,10 +12,10 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
-import entities.Device;
 import entities.EntitiesFactory;
 import entities.Link;
 import entities.Network;
+import entities.Objects;
 import entities.diagram.edit.policies.DefaultBaseItemSemanticEditPolicy;
 
 /**
@@ -56,10 +56,10 @@ public class LinkCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof Device) {
+		if (source != null && false == source instanceof Objects) {
 			return false;
 		}
-		if (target != null && false == target instanceof Device) {
+		if (target != null && false == target instanceof Objects) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -126,15 +126,15 @@ public class LinkCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected Device getSource() {
-		return (Device) source;
+	protected Objects getSource() {
+		return (Objects) source;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Device getTarget() {
-		return (Device) target;
+	protected Objects getTarget() {
+		return (Objects) target;
 	}
 
 	/**

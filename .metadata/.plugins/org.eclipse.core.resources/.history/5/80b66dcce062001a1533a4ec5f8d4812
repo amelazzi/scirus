@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/torpics.gmf/src" modelPluginID="torpics.gmf" modelName="Default"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>default.ecore</foreignModel>
+  <genPackages prefix="Entities" disposableProviderFactory="true" ecorePackage="default.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="default.ecore#//CapteurType">
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//CapteurType/Humidity"/>
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//CapteurType/Pollustion"/>
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//CapteurType/Temperature"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="default.ecore#//BddType">
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//BddType/MySQL"/>
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//BddType/PostgreSQL"/>
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//BddType/Oracle"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="default.ecore#//ComProtocol">
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//ComProtocol/SQL"/>
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//ComProtocol/MQTT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="default.ecore#//CloudType">
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//CloudType/ThingSpeak"/>
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//CloudType/GoogleCloud"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="default.ecore#//ReadWrite">
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//ReadWrite/Read"/>
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//ReadWrite/Write"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="default.ecore#//EntryFunctionType">
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//EntryFunctionType/Average"/>
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//EntryFunctionType/Max"/>
+      <genEnumLiterals ecoreEnumLiteral="default.ecore#//EntryFunctionType/Min"/>
+    </genEnums>
+    <genClasses ecoreClass="default.ecore#//Capteur">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Capteur/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Capteur/sendTime"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//DataBase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//DataBase/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//DataBase/protocol"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Link/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference default.ecore#//Link/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference default.ecore#//Link/destination"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference default.ecore#//Link/funcSource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference default.ecore#//Link/funcDestination"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//Cloud">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Cloud/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Cloud/method"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Cloud/APIKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Cloud/channelID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Cloud/protocol"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//Device">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Device/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//Device/name"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//StorageDevice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//StorageDevice/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//StorageDevice/userName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//StorageDevice/pwd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//StorageDevice/port"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//GateWay"/>
+    <genClasses ecoreClass="default.ecore#//Network">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference default.ecore#//Network/deviceList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference default.ecore#//Network/linkList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference default.ecore#//Network/functionList"/>
+    </genClasses>
+    <genClasses ecoreClass="default.ecore#//EntryFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//EntryFunction/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//EntryFunction/threshold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//EntryFunction/metric"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute default.ecore#//EntryFunction/period"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -57,7 +57,7 @@ public class GateWayCreateCommand extends EditElementCommand {
 		GateWay newElement = EntitiesFactory.eINSTANCE.createGateWay();
 
 		Network owner = (Network) getElementToEdit();
-		owner.getDeviceList().add(newElement);
+		owner.getObjectsList().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -57,7 +57,7 @@ public class CapteurCreateCommand extends EditElementCommand {
 		Capteur newElement = EntitiesFactory.eINSTANCE.createCapteur();
 
 		Network owner = (Network) getElementToEdit();
-		owner.getDeviceList().add(newElement);
+		owner.getObjectsList().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

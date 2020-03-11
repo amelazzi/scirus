@@ -36,7 +36,7 @@ public enum ComProtocol implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MQTT(0, "MQTT", "MQTT");
+	MQTT(1, "MQTT", "MQTT");
 
 	/**
 	 * The '<em><b>SQL</b></em>' literal value.
@@ -66,7 +66,7 @@ public enum ComProtocol implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MQTT_VALUE = 0;
+	public static final int MQTT_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>Com Protocol</b></em>' enumerators.
@@ -129,6 +129,7 @@ public enum ComProtocol implements Enumerator {
 	public static ComProtocol get(int value) {
 		switch (value) {
 			case SQL_VALUE: return SQL;
+			case MQTT_VALUE: return MQTT;
 		}
 		return null;
 	}

@@ -6,6 +6,7 @@ import org.eclipse.gef.palette.PaletteContainer;
 import org.eclipse.gef.palette.PaletteGroup;
 import org.eclipse.gef.palette.PaletteRoot;
 import org.eclipse.gef.palette.ToolEntry;
+import org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry;
 import org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry;
 
 import entities.diagram.providers.DefaultElementTypes;
@@ -32,11 +33,10 @@ public class DefaultPaletteFactory {
 		paletteContainer.setId("createEntities1Group"); //$NON-NLS-1$
 		paletteContainer.add(createCapteur1CreationTool());
 		paletteContainer.add(createDataBase2CreationTool());
-		paletteContainer.add(createLink3CreationTool());
-		paletteContainer.add(createCloud4CreationTool());
-		paletteContainer.add(createDevice5CreationTool());
-		paletteContainer.add(createStorageDevice6CreationTool());
-		paletteContainer.add(createGateWay7CreationTool());
+		paletteContainer.add(createCloud3CreationTool());
+		paletteContainer.add(createGateWay4CreationTool());
+		paletteContainer.add(createEntryFunction5CreationTool());
+		paletteContainer.add(createLink6CreationTool());
 		return paletteContainer;
 	}
 
@@ -47,10 +47,10 @@ public class DefaultPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				Messages.Capteur1CreationTool_title,
 				Messages.Capteur1CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.DataBase_2001));
+				Collections.singletonList(DefaultElementTypes.Capteur_2001));
 		entry.setId("createCapteur1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.DataBase_2001));
+				.getImageDescriptor(DefaultElementTypes.Capteur_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -62,10 +62,10 @@ public class DefaultPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				Messages.DataBase2CreationTool_title,
 				Messages.DataBase2CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.Capteur_2002));
+				Collections.singletonList(DefaultElementTypes.DataBase_2002));
 		entry.setId("createDataBase2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.Capteur_2002));
+				.getImageDescriptor(DefaultElementTypes.DataBase_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -73,14 +73,14 @@ public class DefaultPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createLink3CreationTool() {
+	private ToolEntry createCloud3CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.Link3CreationTool_title,
-				Messages.Link3CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.GateWay_2003));
-		entry.setId("createLink3CreationTool"); //$NON-NLS-1$
+				Messages.Cloud3CreationTool_title,
+				Messages.Cloud3CreationTool_desc,
+				Collections.singletonList(DefaultElementTypes.Cloud_2003));
+		entry.setId("createCloud3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.GateWay_2003));
+				.getImageDescriptor(DefaultElementTypes.Cloud_2003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -88,14 +88,14 @@ public class DefaultPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createCloud4CreationTool() {
+	private ToolEntry createGateWay4CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.Cloud4CreationTool_title,
-				Messages.Cloud4CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.Cloud_2004));
-		entry.setId("createCloud4CreationTool"); //$NON-NLS-1$
+				Messages.GateWay4CreationTool_title,
+				Messages.GateWay4CreationTool_desc,
+				Collections.singletonList(DefaultElementTypes.GateWay_2004));
+		entry.setId("createGateWay4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.Cloud_2004));
+				.getImageDescriptor(DefaultElementTypes.GateWay_2004));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -103,34 +103,31 @@ public class DefaultPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createDevice5CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.Device5CreationTool_title,
-				Messages.Device5CreationTool_desc, null, null) {
-		};
-		entry.setId("createDevice5CreationTool"); //$NON-NLS-1$
+	private ToolEntry createEntryFunction5CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				Messages.EntryFunction5CreationTool_title,
+				Messages.EntryFunction5CreationTool_desc,
+				Collections
+						.singletonList(DefaultElementTypes.EntryFunction_2005));
+		entry.setId("createEntryFunction5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(DefaultElementTypes
+				.getImageDescriptor(DefaultElementTypes.EntryFunction_2005));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
 	/**
 	 * @generated
 	 */
-	private ToolEntry createStorageDevice6CreationTool() {
-		ToolEntry entry = new ToolEntry(
-				Messages.StorageDevice6CreationTool_title,
-				Messages.StorageDevice6CreationTool_desc, null, null) {
-		};
-		entry.setId("createStorageDevice6CreationTool"); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createGateWay7CreationTool() {
-		ToolEntry entry = new ToolEntry(Messages.GateWay7CreationTool_title,
-				Messages.GateWay7CreationTool_desc, null, null) {
-		};
-		entry.setId("createGateWay7CreationTool"); //$NON-NLS-1$
+	private ToolEntry createLink6CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
+				Messages.Link6CreationTool_title,
+				Messages.Link6CreationTool_desc,
+				Collections.singletonList(DefaultElementTypes.Link_4001));
+		entry.setId("createLink6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(DefaultElementTypes
+				.getImageDescriptor(DefaultElementTypes.Link_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 

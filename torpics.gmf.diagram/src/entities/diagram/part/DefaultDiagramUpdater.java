@@ -16,14 +16,16 @@ import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
 import entities.Capteur;
 import entities.Cloud;
 import entities.DataBase;
-import entities.Device;
 import entities.EntitiesPackage;
+import entities.EntryFunction;
 import entities.GateWay;
 import entities.Link;
 import entities.Network;
+import entities.Objects;
 import entities.diagram.edit.parts.CapteurEditPart;
 import entities.diagram.edit.parts.CloudEditPart;
 import entities.diagram.edit.parts.DataBaseEditPart;
+import entities.diagram.edit.parts.EntryFunctionEditPart;
 import entities.diagram.edit.parts.GateWayEditPart;
 import entities.diagram.edit.parts.LinkEditPart;
 import entities.diagram.edit.parts.NetworkEditPart;
@@ -55,16 +57,20 @@ public class DefaultDiagramUpdater {
 		}
 		Network modelElement = (Network) view.getElement();
 		LinkedList<DefaultNodeDescriptor> result = new LinkedList<DefaultNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getDeviceList().iterator(); it
+		for (Iterator<?> it = modelElement.getObjectsList().iterator(); it
 				.hasNext();) {
-			Device childElement = (Device) it.next();
+			Objects childElement = (Objects) it.next();
 			int visualID = DefaultVisualIDRegistry.getNodeVisualID(view,
 					childElement);
+			if (visualID == CapteurEditPart.VISUAL_ID) {
+				result.add(new DefaultNodeDescriptor(childElement, visualID));
+				continue;
+			}
 			if (visualID == DataBaseEditPart.VISUAL_ID) {
 				result.add(new DefaultNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CapteurEditPart.VISUAL_ID) {
+			if (visualID == CloudEditPart.VISUAL_ID) {
 				result.add(new DefaultNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -72,7 +78,7 @@ public class DefaultDiagramUpdater {
 				result.add(new DefaultNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == CloudEditPart.VISUAL_ID) {
+			if (visualID == EntryFunctionEditPart.VISUAL_ID) {
 				result.add(new DefaultNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -87,14 +93,16 @@ public class DefaultDiagramUpdater {
 		switch (DefaultVisualIDRegistry.getVisualID(view)) {
 		case NetworkEditPart.VISUAL_ID:
 			return getNetwork_1000ContainedLinks(view);
-		case DataBaseEditPart.VISUAL_ID:
-			return getDataBase_2001ContainedLinks(view);
 		case CapteurEditPart.VISUAL_ID:
-			return getCapteur_2002ContainedLinks(view);
-		case GateWayEditPart.VISUAL_ID:
-			return getGateWay_2003ContainedLinks(view);
+			return getCapteur_2001ContainedLinks(view);
+		case DataBaseEditPart.VISUAL_ID:
+			return getDataBase_2002ContainedLinks(view);
 		case CloudEditPart.VISUAL_ID:
-			return getCloud_2004ContainedLinks(view);
+			return getCloud_2003ContainedLinks(view);
+		case GateWayEditPart.VISUAL_ID:
+			return getGateWay_2004ContainedLinks(view);
+		case EntryFunctionEditPart.VISUAL_ID:
+			return getEntryFunction_2005ContainedLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001ContainedLinks(view);
 		}
@@ -106,14 +114,16 @@ public class DefaultDiagramUpdater {
 	 */
 	public static List<DefaultLinkDescriptor> getIncomingLinks(View view) {
 		switch (DefaultVisualIDRegistry.getVisualID(view)) {
-		case DataBaseEditPart.VISUAL_ID:
-			return getDataBase_2001IncomingLinks(view);
 		case CapteurEditPart.VISUAL_ID:
-			return getCapteur_2002IncomingLinks(view);
-		case GateWayEditPart.VISUAL_ID:
-			return getGateWay_2003IncomingLinks(view);
+			return getCapteur_2001IncomingLinks(view);
+		case DataBaseEditPart.VISUAL_ID:
+			return getDataBase_2002IncomingLinks(view);
 		case CloudEditPart.VISUAL_ID:
-			return getCloud_2004IncomingLinks(view);
+			return getCloud_2003IncomingLinks(view);
+		case GateWayEditPart.VISUAL_ID:
+			return getGateWay_2004IncomingLinks(view);
+		case EntryFunctionEditPart.VISUAL_ID:
+			return getEntryFunction_2005IncomingLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001IncomingLinks(view);
 		}
@@ -125,14 +135,16 @@ public class DefaultDiagramUpdater {
 	 */
 	public static List<DefaultLinkDescriptor> getOutgoingLinks(View view) {
 		switch (DefaultVisualIDRegistry.getVisualID(view)) {
-		case DataBaseEditPart.VISUAL_ID:
-			return getDataBase_2001OutgoingLinks(view);
 		case CapteurEditPart.VISUAL_ID:
-			return getCapteur_2002OutgoingLinks(view);
-		case GateWayEditPart.VISUAL_ID:
-			return getGateWay_2003OutgoingLinks(view);
+			return getCapteur_2001OutgoingLinks(view);
+		case DataBaseEditPart.VISUAL_ID:
+			return getDataBase_2002OutgoingLinks(view);
 		case CloudEditPart.VISUAL_ID:
-			return getCloud_2004OutgoingLinks(view);
+			return getCloud_2003OutgoingLinks(view);
+		case GateWayEditPart.VISUAL_ID:
+			return getGateWay_2004OutgoingLinks(view);
+		case EntryFunctionEditPart.VISUAL_ID:
+			return getEntryFunction_2005OutgoingLinks(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001OutgoingLinks(view);
 		}
@@ -153,7 +165,7 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getDataBase_2001ContainedLinks(
+	public static List<DefaultLinkDescriptor> getCapteur_2001ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -161,7 +173,7 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getCapteur_2002ContainedLinks(
+	public static List<DefaultLinkDescriptor> getDataBase_2002ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -169,7 +181,7 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getGateWay_2003ContainedLinks(
+	public static List<DefaultLinkDescriptor> getCloud_2003ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -177,7 +189,15 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getCloud_2004ContainedLinks(
+	public static List<DefaultLinkDescriptor> getGateWay_2004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<DefaultLinkDescriptor> getEntryFunction_2005ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -193,21 +213,7 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getDataBase_2001IncomingLinks(
-			View view) {
-		DataBase modelElement = (DataBase) view.getElement();
-		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
-				.find(view.eResource().getResourceSet().getResources());
-		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
-		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement,
-				crossReferences));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<DefaultLinkDescriptor> getCapteur_2002IncomingLinks(
+	public static List<DefaultLinkDescriptor> getCapteur_2001IncomingLinks(
 			View view) {
 		Capteur modelElement = (Capteur) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -221,7 +227,35 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getGateWay_2003IncomingLinks(
+	public static List<DefaultLinkDescriptor> getDataBase_2002IncomingLinks(
+			View view) {
+		DataBase modelElement = (DataBase) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<DefaultLinkDescriptor> getCloud_2003IncomingLinks(
+			View view) {
+		Cloud modelElement = (Cloud) view.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement,
+				crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<DefaultLinkDescriptor> getGateWay_2004IncomingLinks(
 			View view) {
 		GateWay modelElement = (GateWay) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -235,9 +269,9 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getCloud_2004IncomingLinks(
+	public static List<DefaultLinkDescriptor> getEntryFunction_2005IncomingLinks(
 			View view) {
-		Cloud modelElement = (Cloud) view.getElement();
+		EntryFunction modelElement = (EntryFunction) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
@@ -257,18 +291,7 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getDataBase_2001OutgoingLinks(
-			View view) {
-		DataBase modelElement = (DataBase) view.getElement();
-		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
-		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<DefaultLinkDescriptor> getCapteur_2002OutgoingLinks(
+	public static List<DefaultLinkDescriptor> getCapteur_2001OutgoingLinks(
 			View view) {
 		Capteur modelElement = (Capteur) view.getElement();
 		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
@@ -279,7 +302,29 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getGateWay_2003OutgoingLinks(
+	public static List<DefaultLinkDescriptor> getDataBase_2002OutgoingLinks(
+			View view) {
+		DataBase modelElement = (DataBase) view.getElement();
+		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<DefaultLinkDescriptor> getCloud_2003OutgoingLinks(
+			View view) {
+		Cloud modelElement = (Cloud) view.getElement();
+		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<DefaultLinkDescriptor> getGateWay_2004OutgoingLinks(
 			View view) {
 		GateWay modelElement = (GateWay) view.getElement();
 		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
@@ -290,9 +335,9 @@ public class DefaultDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<DefaultLinkDescriptor> getCloud_2004OutgoingLinks(
+	public static List<DefaultLinkDescriptor> getEntryFunction_2005OutgoingLinks(
 			View view) {
-		Cloud modelElement = (Cloud) view.getElement();
+		EntryFunction modelElement = (EntryFunction) view.getElement();
 		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));
 		return result;
@@ -323,8 +368,8 @@ public class DefaultDiagramUpdater {
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Device dst = link.getDestination();
-			Device src = link.getSource();
+			Objects dst = link.getDestination();
+			Objects src = link.getSource();
 			result.add(new DefaultLinkDescriptor(src, dst, link,
 					DefaultElementTypes.Link_4001, LinkEditPart.VISUAL_ID));
 		}
@@ -335,7 +380,7 @@ public class DefaultDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection<DefaultLinkDescriptor> getIncomingTypeModelFacetLinks_Link_4001(
-			Device target,
+			Objects target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<DefaultLinkDescriptor> result = new LinkedList<DefaultLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences
@@ -351,7 +396,7 @@ public class DefaultDiagramUpdater {
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Device src = link.getSource();
+			Objects src = link.getSource();
 			result.add(new DefaultLinkDescriptor(src, target, link,
 					DefaultElementTypes.Link_4001, LinkEditPart.VISUAL_ID));
 		}
@@ -362,7 +407,7 @@ public class DefaultDiagramUpdater {
 	 * @generated
 	 */
 	private static Collection<DefaultLinkDescriptor> getOutgoingTypeModelFacetLinks_Link_4001(
-			Device source) {
+			Objects source) {
 		Network container = null;
 		// Find container element for the link.
 		// Climb up by containment hierarchy starting from the source
@@ -388,8 +433,8 @@ public class DefaultDiagramUpdater {
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			Device dst = link.getDestination();
-			Device src = link.getSource();
+			Objects dst = link.getDestination();
+			Objects src = link.getSource();
 			if (src != source) {
 				continue;
 			}

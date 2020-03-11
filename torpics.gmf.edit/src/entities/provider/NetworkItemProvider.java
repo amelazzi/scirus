@@ -77,7 +77,7 @@ public class NetworkItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EntitiesPackage.Literals.NETWORK__DEVICE_LIST);
+			childrenFeatures.add(EntitiesPackage.Literals.NETWORK__OBJECTS_LIST);
 			childrenFeatures.add(EntitiesPackage.Literals.NETWORK__LINK_LIST);
 		}
 		return childrenFeatures;
@@ -131,7 +131,7 @@ public class NetworkItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Network.class)) {
-			case EntitiesPackage.NETWORK__DEVICE_LIST:
+			case EntitiesPackage.NETWORK__OBJECTS_LIST:
 			case EntitiesPackage.NETWORK__LINK_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -152,33 +152,43 @@ public class NetworkItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EntitiesPackage.Literals.NETWORK__DEVICE_LIST,
+				(EntitiesPackage.Literals.NETWORK__OBJECTS_LIST,
+				 EntitiesFactory.eINSTANCE.createObjects()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(EntitiesPackage.Literals.NETWORK__OBJECTS_LIST,
 				 EntitiesFactory.eINSTANCE.createDevice()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EntitiesPackage.Literals.NETWORK__DEVICE_LIST,
+				(EntitiesPackage.Literals.NETWORK__OBJECTS_LIST,
 				 EntitiesFactory.eINSTANCE.createCapteur()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EntitiesPackage.Literals.NETWORK__DEVICE_LIST,
+				(EntitiesPackage.Literals.NETWORK__OBJECTS_LIST,
 				 EntitiesFactory.eINSTANCE.createStorageDevice()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EntitiesPackage.Literals.NETWORK__DEVICE_LIST,
+				(EntitiesPackage.Literals.NETWORK__OBJECTS_LIST,
 				 EntitiesFactory.eINSTANCE.createDataBase()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EntitiesPackage.Literals.NETWORK__DEVICE_LIST,
+				(EntitiesPackage.Literals.NETWORK__OBJECTS_LIST,
 				 EntitiesFactory.eINSTANCE.createCloud()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EntitiesPackage.Literals.NETWORK__DEVICE_LIST,
+				(EntitiesPackage.Literals.NETWORK__OBJECTS_LIST,
 				 EntitiesFactory.eINSTANCE.createGateWay()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(EntitiesPackage.Literals.NETWORK__OBJECTS_LIST,
+				 EntitiesFactory.eINSTANCE.createEntryFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter

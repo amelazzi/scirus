@@ -5,8 +5,6 @@ package entities.tests;
 import entities.Device;
 import entities.EntitiesFactory;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DeviceTest extends TestCase {
-
-	/**
-	 * The fixture for this Device test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Device fixture = null;
+public class DeviceTest extends ObjectsTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class DeviceTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Device test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Device fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Device test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Device getFixture() {
-		return fixture;
+		return (Device)fixture;
 	}
 
 	/**

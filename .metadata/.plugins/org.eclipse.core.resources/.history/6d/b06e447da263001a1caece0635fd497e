@@ -1,0 +1,146 @@
+package entities.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class DefaultModelingAssistantProviderOfGateWayEditPart extends entities.diagram.providers.DefaultModelingAssistantProvider {
+
+					
+			/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnSource(org.eclipse.core.runtime.IAdaptable source) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnSource((entities.diagram.edit.parts.GateWayEditPart) sourceEditPart);
+	}
+	
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnSource(entities.diagram.edit.parts.GateWayEditPart source) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+				types.add(entities.diagram.providers.DefaultElementTypes.Link_4001);
+				return types;
+	}
+	
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnSourceAndTarget(
+			org.eclipse.core.runtime.IAdaptable source, org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnSourceAndTarget((entities.diagram.edit.parts.GateWayEditPart) sourceEditPart, targetEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnSourceAndTarget(entities.diagram.edit.parts.GateWayEditPart source, org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+							if (targetEditPart instanceof entities.diagram.edit.parts.CapteurEditPart) {
+			types.add(entities.diagram.providers.DefaultElementTypes.Link_4001);
+		}
+					if (targetEditPart instanceof entities.diagram.edit.parts.DataBaseEditPart) {
+			types.add(entities.diagram.providers.DefaultElementTypes.Link_4001);
+		}
+					if (targetEditPart instanceof entities.diagram.edit.parts.CloudEditPart) {
+			types.add(entities.diagram.providers.DefaultElementTypes.Link_4001);
+		}
+					if (targetEditPart instanceof entities.diagram.edit.parts.GateWayEditPart) {
+			types.add(entities.diagram.providers.DefaultElementTypes.Link_4001);
+		}
+					if (targetEditPart instanceof entities.diagram.edit.parts.EntryFunctionEditPart) {
+			types.add(entities.diagram.providers.DefaultElementTypes.Link_4001);
+		}
+							return types;
+	}
+
+			/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForTarget(org.eclipse.core.runtime.IAdaptable source,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart sourceEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) source.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetTypesForTarget((entities.diagram.edit.parts.GateWayEditPart) sourceEditPart, relationshipType);
+	}
+	
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetTypesForTarget(entities.diagram.edit.parts.GateWayEditPart source, org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == entities.diagram.providers.DefaultElementTypes.Link_4001) {
+						types.add(entities.diagram.providers.DefaultElementTypes.Capteur_2001);
+						types.add(entities.diagram.providers.DefaultElementTypes.DataBase_2002);
+						types.add(entities.diagram.providers.DefaultElementTypes.Cloud_2003);
+						types.add(entities.diagram.providers.DefaultElementTypes.GateWay_2004);
+						types.add(entities.diagram.providers.DefaultElementTypes.EntryFunction_2005);
+					}
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnTarget(org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnTarget((entities.diagram.edit.parts.GateWayEditPart) targetEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnTarget(entities.diagram.edit.parts.GateWayEditPart target) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+				types.add(entities.diagram.providers.DefaultElementTypes.Link_4001);
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForSource(org.eclipse.core.runtime.IAdaptable target,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetTypesForSource((entities.diagram.edit.parts.GateWayEditPart) targetEditPart, relationshipType);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetTypesForSource(entities.diagram.edit.parts.GateWayEditPart target, org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == entities.diagram.providers.DefaultElementTypes.Link_4001) {
+						types.add(entities.diagram.providers.DefaultElementTypes.Capteur_2001);
+						types.add(entities.diagram.providers.DefaultElementTypes.DataBase_2002);
+						types.add(entities.diagram.providers.DefaultElementTypes.Cloud_2003);
+						types.add(entities.diagram.providers.DefaultElementTypes.GateWay_2004);
+						types.add(entities.diagram.providers.DefaultElementTypes.EntryFunction_2005);
+					}
+				return types;
+	}
+
+	}

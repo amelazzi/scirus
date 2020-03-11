@@ -57,7 +57,7 @@ public class DataBaseCreateCommand extends EditElementCommand {
 		DataBase newElement = EntitiesFactory.eINSTANCE.createDataBase();
 
 		Network owner = (Network) getElementToEdit();
-		owner.getDeviceList().add(newElement);
+		owner.getObjectsList().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

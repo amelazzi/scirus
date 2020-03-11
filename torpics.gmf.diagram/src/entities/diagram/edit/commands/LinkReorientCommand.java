@@ -8,9 +8,9 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
-import entities.Device;
 import entities.Link;
 import entities.Network;
+import entities.Objects;
 import entities.diagram.edit.policies.DefaultBaseItemSemanticEditPolicy;
 
 /**
@@ -63,10 +63,10 @@ public class LinkReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof Device && newEnd instanceof Device)) {
+		if (!(oldEnd instanceof Objects && newEnd instanceof Objects)) {
 			return false;
 		}
-		Device target = getLink().getDestination();
+		Objects target = getLink().getDestination();
 		if (!(getLink().eContainer() instanceof Network)) {
 			return false;
 		}
@@ -80,10 +80,10 @@ public class LinkReorientCommand extends EditElementCommand {
 	 * @generated
 	 */
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof Device && newEnd instanceof Device)) {
+		if (!(oldEnd instanceof Objects && newEnd instanceof Objects)) {
 			return false;
 		}
-		Device source = getLink().getSource();
+		Objects source = getLink().getSource();
 		if (!(getLink().eContainer() instanceof Network)) {
 			return false;
 		}
@@ -137,28 +137,28 @@ public class LinkReorientCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected Device getOldSource() {
-		return (Device) oldEnd;
+	protected Objects getOldSource() {
+		return (Objects) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Device getNewSource() {
-		return (Device) newEnd;
+	protected Objects getNewSource() {
+		return (Objects) newEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Device getOldTarget() {
-		return (Device) oldEnd;
+	protected Objects getOldTarget() {
+		return (Objects) oldEnd;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Device getNewTarget() {
-		return (Device) newEnd;
+	protected Objects getNewTarget() {
+		return (Objects) newEnd;
 	}
 }

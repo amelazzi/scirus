@@ -57,7 +57,7 @@ public class CloudCreateCommand extends EditElementCommand {
 		Cloud newElement = EntitiesFactory.eINSTANCE.createCloud();
 
 		Network owner = (Network) getElementToEdit();
-		owner.getDeviceList().add(newElement);
+		owner.getObjectsList().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

@@ -1,8 +1,8 @@
 package entities.diagram.edit.parts;
 
+import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.gef.EditPart;
@@ -32,7 +32,7 @@ public class CapteurEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2002;
+	public static final int VISUAL_ID = 2001;
 
 	/**
 	 * @generated
@@ -106,7 +106,7 @@ public class CapteurEditPart extends ShapeNodeEditPart {
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof CapteurNameEditPart) {
 			((CapteurNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureCapteurIdFigure());
+					.getFigureCapteurNameFigure());
 			return true;
 		}
 		return false;
@@ -246,24 +246,12 @@ public class CapteurEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class CapteurFigure extends RectangleFigure {
+	public class CapteurFigure extends Ellipse {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureCapteurIdFigure;
-		/**
-		 * @generated
-		 */
 		private WrappingLabel fFigureCapteurNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCapteurTypeFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCapteurSendTimeFigure;
 
 		/**
 		 * @generated
@@ -289,37 +277,12 @@ public class CapteurEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureCapteurIdFigure = new WrappingLabel();
-
-			fFigureCapteurIdFigure.setText("<...>");
-
-			this.add(fFigureCapteurIdFigure);
-
 			fFigureCapteurNameFigure = new WrappingLabel();
 
 			fFigureCapteurNameFigure.setText("<...>");
 
 			this.add(fFigureCapteurNameFigure);
 
-			fFigureCapteurTypeFigure = new WrappingLabel();
-
-			fFigureCapteurTypeFigure.setText("<...>");
-
-			this.add(fFigureCapteurTypeFigure);
-
-			fFigureCapteurSendTimeFigure = new WrappingLabel();
-
-			fFigureCapteurSendTimeFigure.setText("<...>");
-
-			this.add(fFigureCapteurSendTimeFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCapteurIdFigure() {
-			return fFigureCapteurIdFigure;
 		}
 
 		/**
@@ -327,20 +290,6 @@ public class CapteurEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureCapteurNameFigure() {
 			return fFigureCapteurNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCapteurTypeFigure() {
-			return fFigureCapteurTypeFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCapteurSendTimeFigure() {
-			return fFigureCapteurSendTimeFigure;
 		}
 
 	}

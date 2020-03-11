@@ -1,0 +1,39 @@
+package entities.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class NetworkEditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart  {
+
+		/**
+ * @generated
+ */
+	public final static String MODEL_ID = "Default";  //$NON-NLS-1$
+	
+		/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 1000;
+	
+		/**
+ * @generated
+ */
+	public NetworkEditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+			super.createDefaultEditPolicies();
+		installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new entities.diagram.edit.policies.NetworkItemSemanticEditPolicy());
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CANONICAL_ROLE, new entities.diagram.edit.policies.NetworkCanonicalEditPolicy());
+		installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CREATION_ROLE, new org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent(entities.diagram.part.DefaultVisualIDRegistry.TYPED_INSTANCE));
+					// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.POPUPBAR_ROLE);
+		}
+	
+		
+
+
+	}

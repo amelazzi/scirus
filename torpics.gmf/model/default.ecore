@@ -21,14 +21,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ComProtocol">
     <eLiterals name="SQL"/>
-    <eLiterals name="MQTT"/>
+    <eLiterals name="MQTT" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Device"/>
+        eType="#//Objects"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="destination" lowerBound="1"
-        eType="#//Device"/>
+        eType="#//Objects"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cloud" eSuperTypes="#//StorageDevice">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CloudType"/>
@@ -41,9 +41,7 @@
     <eLiterals name="ThingSpeak"/>
     <eLiterals name="GoogleCloud" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Device">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        iD="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Device" eSuperTypes="#//Objects">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StorageDevice" eSuperTypes="#//Device">
@@ -58,9 +56,24 @@
     <eLiterals name="Write" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Network">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="deviceList" upperBound="-1"
-        eType="#//Device" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectsList" upperBound="-1"
+        eType="#//Objects" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkList" upperBound="-1"
         eType="#//Link" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntryFunction" eSuperTypes="#//Objects">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EntryFunctionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="threshold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" eType="#//CapteurType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="period" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EntryFunctionType">
+    <eLiterals name="Average"/>
+    <eLiterals name="Max" value="1"/>
+    <eLiterals name="Min" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Objects">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        iD="true"/>
   </eClassifiers>
 </ecore:EPackage>

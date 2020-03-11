@@ -32,9 +32,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
-import entities.Device;
 import entities.Link;
 import entities.Network;
+import entities.Objects;
 import entities.diagram.part.DefaultDiagramEditorPlugin;
 import entities.diagram.part.DefaultVisualIDRegistry;
 import entities.diagram.providers.DefaultElementTypes;
@@ -325,8 +325,8 @@ public class DefaultBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateLink_4001(Network container, Device source,
-				Device target) {
+		public boolean canCreateLink_4001(Network container, Objects source,
+				Objects target) {
 			return canExistLink_4001(container, null, source, target);
 		}
 
@@ -334,7 +334,7 @@ public class DefaultBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		 * @generated
 		 */
 		public boolean canExistLink_4001(Network container, Link linkInstance,
-				Device source, Device target) {
+				Objects source, Objects target) {
 			return true;
 		}
 	}

@@ -1,0 +1,177 @@
+package entities.diagram.providers;
+
+/**
+ * @generated
+ */
+public class DefaultParserProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider implements org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider {
+	
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser gateWayName_5002Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getGateWayName_5002Parser() {
+		if (gateWayName_5002Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				entities.EntitiesPackage.eINSTANCE.getDevice_Name()
+			};
+				entities.diagram.parsers.MessageFormatParser parser = new entities.diagram.parsers.MessageFormatParser(features);
+								gateWayName_5002Parser = parser;
+		}
+		return gateWayName_5002Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser dataBaseName_5003Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getDataBaseName_5003Parser() {
+		if (dataBaseName_5003Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				entities.EntitiesPackage.eINSTANCE.getDevice_Name()
+			};
+				entities.diagram.parsers.MessageFormatParser parser = new entities.diagram.parsers.MessageFormatParser(features);
+								dataBaseName_5003Parser = parser;
+		}
+		return dataBaseName_5003Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser cloudName_5004Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCloudName_5004Parser() {
+		if (cloudName_5004Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				entities.EntitiesPackage.eINSTANCE.getDevice_Name()
+			};
+				entities.diagram.parsers.MessageFormatParser parser = new entities.diagram.parsers.MessageFormatParser(features);
+								cloudName_5004Parser = parser;
+		}
+		return cloudName_5004Parser;
+	}
+
+
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser capteurName_5001Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getCapteurName_5001Parser() {
+		if (capteurName_5001Parser == null) {
+						org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				entities.EntitiesPackage.eINSTANCE.getDevice_Name()
+			};
+				entities.diagram.parsers.MessageFormatParser parser = new entities.diagram.parsers.MessageFormatParser(features);
+								capteurName_5001Parser = parser;
+		}
+		return capteurName_5001Parser;
+	}
+
+
+	
+	
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(int visualID) {
+		switch (visualID) {
+				case entities.diagram.edit.parts.GateWayNameEditPart.VISUAL_ID: return getGateWayName_5002Parser();
+		case entities.diagram.edit.parts.DataBaseNameEditPart.VISUAL_ID: return getDataBaseName_5003Parser();
+		case entities.diagram.edit.parts.CloudNameEditPart.VISUAL_ID: return getCloudName_5004Parser();
+		case entities.diagram.edit.parts.CapteurNameEditPart.VISUAL_ID: return getCapteurName_5001Parser();
+						}
+		return null;
+	}
+		/**
+ * Utility method that consults ParserService
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(org.eclipse.gmf.runtime.emf.type.core.IElementType type, org.eclipse.emf.ecore.EObject object, String parserHint) {
+		return org.eclipse.gmf.runtime.common.ui.services.parser.ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
+	}
+		/**
+ * @generated
+ */
+	public org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(
+			org.eclipse.core.runtime.IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(entities.diagram.part.DefaultVisualIDRegistry.getVisualID(vid));
+		}
+		org.eclipse.gmf.runtime.notation.View view =
+				(org.eclipse.gmf.runtime.notation.View) hint.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+		if (view != null) {
+			return getParser(entities.diagram.part.DefaultVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+		/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (operation instanceof org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) {
+			org.eclipse.core.runtime.IAdaptable hint =
+					((org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) operation).getHint();
+			if (entities.diagram.providers.DefaultElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	private static class HintAdapter extends org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter {
+
+		/**
+ * @generated
+ */
+		private final org.eclipse.gmf.runtime.emf.type.core.IElementType elementType;
+
+		/**
+ * @generated
+ */
+		public HintAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType type,
+				org.eclipse.emf.ecore.EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+ * @generated
+ */
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+	}

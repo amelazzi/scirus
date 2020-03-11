@@ -1,0 +1,193 @@
+package entities.diagram.providers;
+
+/**
+ * @generated
+ */
+public class DefaultElementTypes {
+
+		/**
+ * @generated
+ */
+private DefaultElementTypes() {
+}
+	
+		/**
+ * @generated
+ */
+private static java.util.Map<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement> elements;
+
+	/**
+ * @generated
+ */
+private static org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages elementTypeImages = new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages(	entities.diagram.part.DefaultDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
+
+	/**
+ * @generated
+ */
+private static java.util.Set<org.eclipse.gmf.runtime.emf.type.core.IElementType> KNOWN_ELEMENT_TYPES;
+	
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Network_1000 = getElementType("torpics.gmf.diagram.Network_1000");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Capteur_2001 = getElementType("torpics.gmf.diagram.Capteur_2001");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType DataBase_2002 = getElementType("torpics.gmf.diagram.DataBase_2002");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Cloud_2003 = getElementType("torpics.gmf.diagram.Cloud_2003");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType GateWay_2004 = getElementType("torpics.gmf.diagram.GateWay_2004");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType EntryFunction_2005 = getElementType("torpics.gmf.diagram.EntryFunction_2005");  //$NON-NLS-1$
+				/**
+ * @generated
+ */
+public static final org.eclipse.gmf.runtime.emf.type.core.IElementType Link_4001 = getElementType("torpics.gmf.diagram.Link_4001");  //$NON-NLS-1$
+		
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImageDescriptor(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.emf.ecore.ENamedElement element) {
+	return elementTypeImages.getImage(element);
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImageDescriptor(getElement(hint));
+}
+
+		/**
+ * @generated
+ */
+public static org.eclipse.swt.graphics.Image getImage(org.eclipse.core.runtime.IAdaptable hint) {
+	return getImage(getElement(hint));
+}
+
+		/**
+ * Returns 'type' of the ecore object associated with the hint.
+ * 
+ * @generated
+ */
+public static org.eclipse.emf.ecore.ENamedElement getElement(org.eclipse.core.runtime.IAdaptable hint) {
+	Object type = hint.getAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType.class);
+	if (elements == null) {
+		elements = new java.util.IdentityHashMap<org.eclipse.gmf.runtime.emf.type.core.IElementType, org.eclipse.emf.ecore.ENamedElement>();
+		
+	elements.put(Network_1000, entities.EntitiesPackage.eINSTANCE.getNetwork());
+					
+	
+	elements.put(Capteur_2001, entities.EntitiesPackage.eINSTANCE.getCapteur());
+					
+	
+	elements.put(DataBase_2002, entities.EntitiesPackage.eINSTANCE.getDataBase());
+					
+	
+	elements.put(Cloud_2003, entities.EntitiesPackage.eINSTANCE.getCloud());
+					
+	
+	elements.put(GateWay_2004, entities.EntitiesPackage.eINSTANCE.getGateWay());
+					
+	
+	elements.put(EntryFunction_2005, entities.EntitiesPackage.eINSTANCE.getEntryFunction());
+							
+	
+	elements.put(Link_4001, entities.EntitiesPackage.eINSTANCE.getLink());
+			}
+	return (org.eclipse.emf.ecore.ENamedElement) elements.get(type);
+}
+
+		/**
+ * @generated
+ */
+private static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(String id) {
+	return org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry.getInstance().getType(id);
+}
+
+		/**
+ * @generated
+ */
+public static boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	if (KNOWN_ELEMENT_TYPES == null) {
+		KNOWN_ELEMENT_TYPES = new java.util.HashSet<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+			KNOWN_ELEMENT_TYPES.add(Network_1000);
+		KNOWN_ELEMENT_TYPES.add(Capteur_2001);
+		KNOWN_ELEMENT_TYPES.add(DataBase_2002);
+		KNOWN_ELEMENT_TYPES.add(Cloud_2003);
+		KNOWN_ELEMENT_TYPES.add(GateWay_2004);
+		KNOWN_ELEMENT_TYPES.add(EntryFunction_2005);
+		KNOWN_ELEMENT_TYPES.add(Link_4001);
+		}
+	return KNOWN_ELEMENT_TYPES.contains(elementType);
+}
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.emf.type.core.IElementType getElementType(int visualID) {
+		switch (visualID) {
+				case entities.diagram.edit.parts.NetworkEditPart.VISUAL_ID:		return Network_1000;
+	case entities.diagram.edit.parts.CapteurEditPart.VISUAL_ID:		return Capteur_2001;
+	case entities.diagram.edit.parts.DataBaseEditPart.VISUAL_ID:		return DataBase_2002;
+	case entities.diagram.edit.parts.CloudEditPart.VISUAL_ID:		return Cloud_2003;
+	case entities.diagram.edit.parts.GateWayEditPart.VISUAL_ID:		return GateWay_2004;
+	case entities.diagram.edit.parts.EntryFunctionEditPart.VISUAL_ID:		return EntryFunction_2005;
+	case entities.diagram.edit.parts.LinkEditPart.VISUAL_ID:		return Link_4001;
+		}
+		return null;
+	}
+	
+		/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes TYPED_INSTANCE 
+		= new org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes(elementTypeImages) {
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public boolean isKnownElementType(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+			return entities.diagram.providers.DefaultElementTypes.isKnownElementType(elementType);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.gmf.runtime.emf.type.core.IElementType getElementTypeForVisualId(int visualID) {
+			return entities.diagram.providers.DefaultElementTypes.getElementType(visualID);
+		}
+		
+		/**
+ * @generated
+ */
+		@Override
+
+		public org.eclipse.emf.ecore.ENamedElement getDefiningNamedElement(org.eclipse.core.runtime.IAdaptable elementTypeAdapter) {
+			return entities.diagram.providers.DefaultElementTypes.getElement(elementTypeAdapter);
+		}
+	}; 
+
+	}

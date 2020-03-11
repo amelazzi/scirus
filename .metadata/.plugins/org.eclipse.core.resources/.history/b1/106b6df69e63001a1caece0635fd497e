@@ -1,0 +1,18 @@
+package entities.diagram.providers;
+
+/**
+ * @generated
+ */
+public class DefaultEditPartProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider {
+
+	
+	/**
+ * @generated
+ */
+	public DefaultEditPartProvider() {
+		super(new entities.diagram.edit.parts.DefaultEditPartFactory(), 			entities.diagram.part.DefaultVisualIDRegistry.TYPED_INSTANCE, 			entities.diagram.edit.parts.NetworkEditPart.MODEL_ID			
+		);
+	}
+
+
+	}

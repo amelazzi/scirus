@@ -256,6 +256,52 @@ public class EntitiesItemProviderAdapterFactory extends EntitiesAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link entities.EntryFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EntryFunctionItemProvider entryFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link entities.EntryFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEntryFunctionAdapter() {
+		if (entryFunctionItemProvider == null) {
+			entryFunctionItemProvider = new EntryFunctionItemProvider(this);
+		}
+
+		return entryFunctionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link entities.Objects} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ObjectsItemProvider objectsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link entities.Objects}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createObjectsAdapter() {
+		if (objectsItemProvider == null) {
+			objectsItemProvider = new ObjectsItemProvider(this);
+		}
+
+		return objectsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,6 +408,8 @@ public class EntitiesItemProviderAdapterFactory extends EntitiesAdapterFactory i
 		if (storageDeviceItemProvider != null) storageDeviceItemProvider.dispose();
 		if (gateWayItemProvider != null) gateWayItemProvider.dispose();
 		if (networkItemProvider != null) networkItemProvider.dispose();
+		if (entryFunctionItemProvider != null) entryFunctionItemProvider.dispose();
+		if (objectsItemProvider != null) objectsItemProvider.dispose();
 	}
 
 }
