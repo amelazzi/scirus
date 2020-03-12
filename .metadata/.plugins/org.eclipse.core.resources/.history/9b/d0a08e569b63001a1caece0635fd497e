@@ -1,7 +1,0 @@
-package entities.diagram.edit.helpers;
-
-/**
- * @generated
- */
-public class EntryFunctionEditHelper extends entities.diagram.edit.helpers.DefaultBaseEditHelper {
-	}

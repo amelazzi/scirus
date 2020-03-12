@@ -34,53 +34,11 @@
             xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="DataBaseIdFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
             name="DataBaseNameFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="DataBaseUrlFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="DataBaseUserNameFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="DataBasePwdFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="DataBasePortFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="DataBaseTypeFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="DataBaseProtocolFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.3"/>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.4"/>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.5"/>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.6"/>
-      <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.7"/>
     </descriptors>
     <descriptors
         name="LinkFigure">
@@ -265,36 +223,29 @@
       figure="CapteurFigure"/>
   <labels
       name="DataBaseId"
-      figure="DataBaseFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+      figure="DataBaseFigure"/>
   <labels
       name="DataBaseName"
       figure="DataBaseFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels
       name="DataBaseUrl"
-      figure="DataBaseFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.2"/>
+      figure="DataBaseFigure"/>
   <labels
       name="DataBaseUserName"
-      figure="DataBaseFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.3"/>
+      figure="DataBaseFigure"/>
   <labels
       name="DataBasePwd"
-      figure="DataBaseFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.4"/>
+      figure="DataBaseFigure"/>
   <labels
       name="DataBasePort"
-      figure="DataBaseFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.5"/>
+      figure="DataBaseFigure"/>
   <labels
       name="DataBaseType"
-      figure="DataBaseFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.6"/>
+      figure="DataBaseFigure"/>
   <labels
       name="DataBaseProtocol"
-      figure="DataBaseFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.7"/>
+      figure="DataBaseFigure"/>
   <labels
       name="CloudId"
       figure="CloudFigure"

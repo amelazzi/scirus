@@ -304,6 +304,11 @@ public class DefaultViewProvider extends AbstractProvider implements
 				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5001 = createLabel(node,
 				DefaultVisualIDRegistry.getType(CapteurNameEditPart.VISUAL_ID));
+		label5001.setLayoutConstraint(NotationFactory.eINSTANCE
+				.createLocation());
+		Location location5001 = (Location) label5001.getLayoutConstraint();
+		location5001.setX(0);
+		location5001.setY(5);
 		return node;
 	}
 

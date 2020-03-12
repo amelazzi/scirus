@@ -106,7 +106,7 @@ public class GateWayEditPart extends ShapeNodeEditPart {
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof GateWayNameEditPart) {
 			((GateWayNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureGateWayIdFigure());
+					.getFigureGateWayNameFigure());
 			return true;
 		}
 		return false;

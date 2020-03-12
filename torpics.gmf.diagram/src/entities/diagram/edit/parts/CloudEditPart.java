@@ -106,7 +106,7 @@ public class CloudEditPart extends ShapeNodeEditPart {
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof CloudNameEditPart) {
 			((CloudNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureCloudIdFigure());
+					.getFigureCloudNameFigure());
 			return true;
 		}
 		return false;

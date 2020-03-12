@@ -15,7 +15,7 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="default.gmfgraph#CapteurId"/>
+            href="default.gmfgraph#CapteurName"/>
         <features
             href="default.ecore#//Device/name"/>
       </labelMappings>
@@ -35,7 +35,7 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="default.gmfgraph#DataBaseId"/>
+            href="default.gmfgraph#DataBaseName"/>
         <features
             href="default.ecore#//Device/name"/>
       </labelMappings>
@@ -55,7 +55,7 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="default.gmfgraph#CloudId"/>
+            href="default.gmfgraph#CloudName"/>
         <features
             href="default.ecore#//Device/name"/>
       </labelMappings>
@@ -75,7 +75,7 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="default.gmfgraph#GateWayId"/>
+            href="default.gmfgraph#GateWayName"/>
         <features
             href="default.ecore#//Device/name"/>
       </labelMappings>
