@@ -258,25 +258,25 @@
          <object class="entities.diagram.edit.parts.CapteurEditPart" id="Capteur_2001"/>
          <context elements="Capteur_2001"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfDataBaseEditPart">
-         <Priority name="Lowest"/>
-         <object class="entities.diagram.edit.parts.DataBaseEditPart" id="DataBase_2002"/>
-         <context elements="DataBase_2002"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfCloudEditPart">
-         <Priority name="Lowest"/>
-         <object class="entities.diagram.edit.parts.CloudEditPart" id="Cloud_2003"/>
-         <context elements="Cloud_2003"/>
-      </modelingAssistantProvider>
             <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfGateWayEditPart">
          <Priority name="Lowest"/>
-         <object class="entities.diagram.edit.parts.GateWayEditPart" id="GateWay_2004"/>
-         <context elements="GateWay_2004"/>
+         <object class="entities.diagram.edit.parts.GateWayEditPart" id="GateWay_2002"/>
+         <context elements="GateWay_2002"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfEntryFunctionEditPart">
          <Priority name="Lowest"/>
-         <object class="entities.diagram.edit.parts.EntryFunctionEditPart" id="EntryFunction_2005"/>
-         <context elements="EntryFunction_2005"/>
+         <object class="entities.diagram.edit.parts.EntryFunctionEditPart" id="EntryFunction_2003"/>
+         <context elements="EntryFunction_2003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfDataBaseEditPart">
+         <Priority name="Lowest"/>
+         <object class="entities.diagram.edit.parts.DataBaseEditPart" id="DataBase_2004"/>
+         <context elements="DataBase_2004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="entities.diagram.providers.assistants.DefaultModelingAssistantProviderOfCloudEditPart">
+         <Priority name="Lowest"/>
+         <object class="entities.diagram.edit.parts.CloudEditPart" id="Cloud_2005"/>
+         <context elements="Cloud_2005"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -320,41 +320,41 @@
       </metamodel>
       <metamodel nsURI="torpics">
          <metamodelType
-               id="torpics.gmf.diagram.DataBase_2002"
-               name="%metatype.name.DataBase_2002"
+               id="torpics.gmf.diagram.GateWay_2002"
+               name="%metatype.name.GateWay_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="DataBase"
-               edithelper="entities.diagram.edit.helpers.DataBaseEditHelper">
+               eclass="GateWay"
+               edithelper="entities.diagram.edit.helpers.GateWayEditHelper">
             <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="torpics">
          <metamodelType
-               id="torpics.gmf.diagram.Cloud_2003"
-               name="%metatype.name.Cloud_2003"
+               id="torpics.gmf.diagram.EntryFunction_2003"
+               name="%metatype.name.EntryFunction_2003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Cloud"
-               edithelper="entities.diagram.edit.helpers.CloudEditHelper">
+               eclass="EntryFunction"
+               edithelper="entities.diagram.edit.helpers.EntryFunctionEditHelper">
             <param name="semanticHint" value="2003"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="torpics">
          <metamodelType
-               id="torpics.gmf.diagram.GateWay_2004"
-               name="%metatype.name.GateWay_2004"
+               id="torpics.gmf.diagram.DataBase_2004"
+               name="%metatype.name.DataBase_2004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="GateWay"
-               edithelper="entities.diagram.edit.helpers.GateWayEditHelper">
+               eclass="DataBase"
+               edithelper="entities.diagram.edit.helpers.DataBaseEditHelper">
             <param name="semanticHint" value="2004"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="torpics">
          <metamodelType
-               id="torpics.gmf.diagram.EntryFunction_2005"
-               name="%metatype.name.EntryFunction_2005"
+               id="torpics.gmf.diagram.Cloud_2005"
+               name="%metatype.name.Cloud_2005"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="EntryFunction"
-               edithelper="entities.diagram.edit.helpers.EntryFunctionEditHelper">
+               eclass="Cloud"
+               edithelper="entities.diagram.edit.helpers.CloudEditHelper">
             <param name="semanticHint" value="2005"/>
          </metamodelType>
       </metamodel>
@@ -382,10 +382,10 @@
       <binding context="torpics.gmf.diagram.TypeContext">
          <elementType ref="torpics.gmf.diagram.Network_1000"/>
          <elementType ref="torpics.gmf.diagram.Capteur_2001"/>
-         <elementType ref="torpics.gmf.diagram.DataBase_2002"/>
-         <elementType ref="torpics.gmf.diagram.Cloud_2003"/>
-         <elementType ref="torpics.gmf.diagram.GateWay_2004"/>
-         <elementType ref="torpics.gmf.diagram.EntryFunction_2005"/>
+         <elementType ref="torpics.gmf.diagram.GateWay_2002"/>
+         <elementType ref="torpics.gmf.diagram.EntryFunction_2003"/>
+         <elementType ref="torpics.gmf.diagram.DataBase_2004"/>
+         <elementType ref="torpics.gmf.diagram.Cloud_2005"/>
          <elementType ref="torpics.gmf.diagram.Link_4001"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>

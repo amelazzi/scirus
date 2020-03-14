@@ -58,7 +58,7 @@ public class GateWayNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5004;
+	public static final int VISUAL_ID = 5002;
 
 	/**
 	 * @generated
@@ -308,7 +308,7 @@ public class GateWayNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = DefaultParserProvider
 					.getParser(
-							DefaultElementTypes.GateWay_2004,
+							DefaultElementTypes.GateWay_2002,
 							getParserElement(),
 							DefaultVisualIDRegistry
 									.getType(entities.diagram.edit.parts.GateWayNameEditPart.VISUAL_ID));

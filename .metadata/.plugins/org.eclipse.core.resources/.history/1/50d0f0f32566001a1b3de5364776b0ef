@@ -1,0 +1,95 @@
+
+package entities.diagram.part;
+
+/**
+ * @generated
+ */
+public class DefaultPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createEntities1Group());
+	}
+
+	/**
+ * Creates "entities" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createEntities1Group() {
+				org.eclipse.gef.palette.PaletteGroup paletteContainer = new org.eclipse.gef.palette.PaletteGroup(entities.diagram.part.Messages.Entities1Group_title);
+				 paletteContainer.setId("createEntities1Group"); //$NON-NLS-1$
+								paletteContainer.add(createCapteur1CreationTool());
+paletteContainer.add(createDataBase2CreationTool());
+paletteContainer.add(createLink3CreationTool());
+paletteContainer.add(createCloud4CreationTool());
+paletteContainer.add(createGateWay5CreationTool());
+paletteContainer.add(createEntryFunction6CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createCapteur1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(entities.diagram.part.Messages.Capteur1CreationTool_title, entities.diagram.part.Messages.Capteur1CreationTool_desc, java.util.Collections.singletonList(entities.diagram.providers.DefaultElementTypes.Capteur_2001));
+				 entry.setId("createCapteur1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(entities.diagram.providers.DefaultElementTypes.getImageDescriptor(entities.diagram.providers.DefaultElementTypes.Capteur_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDataBase2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(entities.diagram.part.Messages.DataBase2CreationTool_title, entities.diagram.part.Messages.DataBase2CreationTool_desc, java.util.Collections.singletonList(entities.diagram.providers.DefaultElementTypes.DataBase_2004));
+				 entry.setId("createDataBase2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(entities.diagram.providers.DefaultElementTypes.getImageDescriptor(entities.diagram.providers.DefaultElementTypes.DataBase_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createLink3CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(entities.diagram.part.Messages.Link3CreationTool_title, entities.diagram.part.Messages.Link3CreationTool_desc, java.util.Collections.singletonList(entities.diagram.providers.DefaultElementTypes.Link_4001));
+				 entry.setId("createLink3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(entities.diagram.providers.DefaultElementTypes.getImageDescriptor(entities.diagram.providers.DefaultElementTypes.Link_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createCloud4CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(entities.diagram.part.Messages.Cloud4CreationTool_title, entities.diagram.part.Messages.Cloud4CreationTool_desc, java.util.Collections.singletonList(entities.diagram.providers.DefaultElementTypes.Cloud_2005));
+				 entry.setId("createCloud4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(entities.diagram.providers.DefaultElementTypes.getImageDescriptor(entities.diagram.providers.DefaultElementTypes.Cloud_2005));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createGateWay5CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(entities.diagram.part.Messages.GateWay5CreationTool_title, entities.diagram.part.Messages.GateWay5CreationTool_desc, java.util.Collections.singletonList(entities.diagram.providers.DefaultElementTypes.GateWay_2002));
+				 entry.setId("createGateWay5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(entities.diagram.providers.DefaultElementTypes.getImageDescriptor(entities.diagram.providers.DefaultElementTypes.GateWay_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createEntryFunction6CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(entities.diagram.part.Messages.EntryFunction6CreationTool_title, entities.diagram.part.Messages.EntryFunction6CreationTool_desc, java.util.Collections.singletonList(entities.diagram.providers.DefaultElementTypes.EntryFunction_2003));
+				 entry.setId("createEntryFunction6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(entities.diagram.providers.DefaultElementTypes.getImageDescriptor(entities.diagram.providers.DefaultElementTypes.EntryFunction_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

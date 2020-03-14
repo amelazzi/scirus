@@ -268,42 +268,42 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Cloud3CreationTool_title;
+	public static String Link3CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Cloud3CreationTool_desc;
+	public static String Link3CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String GateWay4CreationTool_title;
+	public static String Cloud4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String GateWay4CreationTool_desc;
+	public static String Cloud4CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String EntryFunction5CreationTool_title;
+	public static String GateWay5CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String EntryFunction5CreationTool_desc;
+	public static String GateWay5CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Link6CreationTool_title;
+	public static String EntryFunction6CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Link6CreationTool_desc;
+	public static String EntryFunction6CreationTool_desc;
 
 	/**
 	 * @generated
@@ -328,42 +328,42 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_DataBase_2002_incominglinks;
+	public static String NavigatorGroupName_GateWay_2002_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_DataBase_2002_outgoinglinks;
+	public static String NavigatorGroupName_GateWay_2002_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Cloud_2003_incominglinks;
+	public static String NavigatorGroupName_EntryFunction_2003_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Cloud_2003_outgoinglinks;
+	public static String NavigatorGroupName_EntryFunction_2003_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_GateWay_2004_incominglinks;
+	public static String NavigatorGroupName_DataBase_2004_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_GateWay_2004_outgoinglinks;
+	public static String NavigatorGroupName_DataBase_2004_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EntryFunction_2005_incominglinks;
+	public static String NavigatorGroupName_Cloud_2005_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EntryFunction_2005_outgoinglinks;
+	public static String NavigatorGroupName_Cloud_2005_outgoinglinks;
 
 	/**
 	 * @generated

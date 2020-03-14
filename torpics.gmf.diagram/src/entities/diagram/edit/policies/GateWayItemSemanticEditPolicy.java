@@ -29,7 +29,7 @@ public class GateWayItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public GateWayItemSemanticEditPolicy() {
-		super(DefaultElementTypes.GateWay_2004);
+		super(DefaultElementTypes.GateWay_2002);
 	}
 
 	/**

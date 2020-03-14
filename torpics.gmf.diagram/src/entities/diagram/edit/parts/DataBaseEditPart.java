@@ -32,7 +32,7 @@ public class DataBaseEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2002;
+	public static final int VISUAL_ID = 2004;
 
 	/**
 	 * @generated
@@ -251,7 +251,35 @@ public class DataBaseEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureDataBaseIdFigure;
+		/**
+		 * @generated
+		 */
 		private WrappingLabel fFigureDataBaseNameFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureDataBaseUrlFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureDataBaseUserNameFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureDataBasePwdFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureDataBasePortFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureDataBaseTypeFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureDataBaseProtocolFigure;
 
 		/**
 		 * @generated
@@ -277,12 +305,61 @@ public class DataBaseEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
+			fFigureDataBaseIdFigure = new WrappingLabel();
+
+			fFigureDataBaseIdFigure.setText("<...>");
+
+			this.add(fFigureDataBaseIdFigure);
+
 			fFigureDataBaseNameFigure = new WrappingLabel();
 
 			fFigureDataBaseNameFigure.setText("<...>");
 
 			this.add(fFigureDataBaseNameFigure);
 
+			fFigureDataBaseUrlFigure = new WrappingLabel();
+
+			fFigureDataBaseUrlFigure.setText("<...>");
+
+			this.add(fFigureDataBaseUrlFigure);
+
+			fFigureDataBaseUserNameFigure = new WrappingLabel();
+
+			fFigureDataBaseUserNameFigure.setText("<...>");
+
+			this.add(fFigureDataBaseUserNameFigure);
+
+			fFigureDataBasePwdFigure = new WrappingLabel();
+
+			fFigureDataBasePwdFigure.setText("<...>");
+
+			this.add(fFigureDataBasePwdFigure);
+
+			fFigureDataBasePortFigure = new WrappingLabel();
+
+			fFigureDataBasePortFigure.setText("<...>");
+
+			this.add(fFigureDataBasePortFigure);
+
+			fFigureDataBaseTypeFigure = new WrappingLabel();
+
+			fFigureDataBaseTypeFigure.setText("<...>");
+
+			this.add(fFigureDataBaseTypeFigure);
+
+			fFigureDataBaseProtocolFigure = new WrappingLabel();
+
+			fFigureDataBaseProtocolFigure.setText("<...>");
+
+			this.add(fFigureDataBaseProtocolFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureDataBaseIdFigure() {
+			return fFigureDataBaseIdFigure;
 		}
 
 		/**
@@ -290,6 +367,48 @@ public class DataBaseEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureDataBaseNameFigure() {
 			return fFigureDataBaseNameFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureDataBaseUrlFigure() {
+			return fFigureDataBaseUrlFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureDataBaseUserNameFigure() {
+			return fFigureDataBaseUserNameFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureDataBasePwdFigure() {
+			return fFigureDataBasePwdFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureDataBasePortFigure() {
+			return fFigureDataBasePortFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureDataBaseTypeFigure() {
+			return fFigureDataBaseTypeFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureDataBaseProtocolFigure() {
+			return fFigureDataBaseProtocolFigure;
 		}
 
 	}

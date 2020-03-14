@@ -34,11 +34,53 @@
             xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
+            name="DataBaseIdFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
             name="DataBaseNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="DataBaseUrlFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="DataBaseUserNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="DataBasePwdFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="DataBasePortFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="DataBaseTypeFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="DataBaseProtocolFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.4"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.5"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.6"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.7"/>
     </descriptors>
     <descriptors
         name="LinkFigure">
@@ -210,11 +252,11 @@
       figure="LinkFigure"/>
   <labels
       name="CapteurId"
-      figure="CapteurFigure"
-      accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+      figure="CapteurFigure"/>
   <labels
       name="CapteurName"
-      figure="CapteurFigure"/>
+      figure="CapteurFigure"
+      accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels
       name="CapteurType"
       figure="CapteurFigure"/>
@@ -223,29 +265,40 @@
       figure="CapteurFigure"/>
   <labels
       name="DataBaseId"
-      figure="DataBaseFigure"/>
-  <labels
-      name="DataBaseName"
       figure="DataBaseFigure"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels
+      name="DataBaseName"
+      figure="DataBaseFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <labels
       name="DataBaseUrl"
-      figure="DataBaseFigure"/>
+      figure="DataBaseFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.2"/>
   <labels
       name="DataBaseUserName"
-      figure="DataBaseFigure"/>
+      figure="DataBaseFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.3"/>
   <labels
       name="DataBasePwd"
-      figure="DataBaseFigure"/>
+      figure="DataBaseFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.4"/>
   <labels
       name="DataBasePort"
-      figure="DataBaseFigure"/>
+      figure="DataBaseFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.5"/>
   <labels
       name="DataBaseType"
-      figure="DataBaseFigure"/>
+      figure="DataBaseFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.6"/>
   <labels
       name="DataBaseProtocol"
-      figure="DataBaseFigure"/>
+      figure="DataBaseFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.7"/>
+  <labels
+      name="LinkName"
+      figure="LinkFigure"
+      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels
       name="CloudId"
       figure="CloudFigure"
@@ -318,8 +371,4 @@
       name="EntryFunctionPeriod"
       figure="EntryFunctionFigure"
       accessor="//@figures.0/@descriptors.5/@accessors.4"/>
-  <labels
-      name="LinkName"
-      figure="LinkFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
 </gmfgraph:Canvas>

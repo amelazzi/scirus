@@ -34,17 +34,17 @@ public class NetworkItemSemanticEditPolicy extends
 		if (DefaultElementTypes.Capteur_2001 == req.getElementType()) {
 			return getGEFWrapper(new CapteurCreateCommand(req));
 		}
-		if (DefaultElementTypes.DataBase_2002 == req.getElementType()) {
-			return getGEFWrapper(new DataBaseCreateCommand(req));
-		}
-		if (DefaultElementTypes.Cloud_2003 == req.getElementType()) {
-			return getGEFWrapper(new CloudCreateCommand(req));
-		}
-		if (DefaultElementTypes.GateWay_2004 == req.getElementType()) {
+		if (DefaultElementTypes.GateWay_2002 == req.getElementType()) {
 			return getGEFWrapper(new GateWayCreateCommand(req));
 		}
-		if (DefaultElementTypes.EntryFunction_2005 == req.getElementType()) {
+		if (DefaultElementTypes.EntryFunction_2003 == req.getElementType()) {
 			return getGEFWrapper(new EntryFunctionCreateCommand(req));
+		}
+		if (DefaultElementTypes.DataBase_2004 == req.getElementType()) {
+			return getGEFWrapper(new DataBaseCreateCommand(req));
+		}
+		if (DefaultElementTypes.Cloud_2005 == req.getElementType()) {
+			return getGEFWrapper(new CloudCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

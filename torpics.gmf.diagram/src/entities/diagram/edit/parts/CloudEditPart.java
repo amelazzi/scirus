@@ -32,7 +32,7 @@ public class CloudEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2003;
+	public static final int VISUAL_ID = 2005;
 
 	/**
 	 * @generated
