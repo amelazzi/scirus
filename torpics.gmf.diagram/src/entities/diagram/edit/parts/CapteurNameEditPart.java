@@ -58,7 +58,7 @@ public class CapteurNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5001;
+	public static final int VISUAL_ID = 5004;
 
 	/**
 	 * @generated
@@ -308,7 +308,7 @@ public class CapteurNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = DefaultParserProvider
 					.getParser(
-							DefaultElementTypes.Capteur_2001,
+							DefaultElementTypes.Capteur_2004,
 							getParserElement(),
 							DefaultVisualIDRegistry
 									.getType(entities.diagram.edit.parts.CapteurNameEditPart.VISUAL_ID));

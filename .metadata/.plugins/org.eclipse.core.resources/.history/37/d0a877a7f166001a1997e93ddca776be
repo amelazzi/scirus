@@ -1,0 +1,24 @@
+package entities.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class DefaultModelingAssistantProviderOfNetworkEditPart extends entities.diagram.providers.DefaultModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(5);
+					types.add(entities.diagram.providers.DefaultElementTypes.GateWay_2001);
+					types.add(entities.diagram.providers.DefaultElementTypes.Cloud_2002);
+					types.add(entities.diagram.providers.DefaultElementTypes.EntryFunction_2003);
+					types.add(entities.diagram.providers.DefaultElementTypes.Capteur_2004);
+					types.add(entities.diagram.providers.DefaultElementTypes.DataBase_2005);
+					return types;	
+	}
+			
+	
+	}

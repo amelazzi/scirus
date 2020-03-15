@@ -32,7 +32,7 @@ public class CapteurEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2001;
+	public static final int VISUAL_ID = 2004;
 
 	/**
 	 * @generated

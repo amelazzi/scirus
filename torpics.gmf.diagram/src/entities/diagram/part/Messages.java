@@ -318,22 +318,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Capteur_2001_incominglinks;
+	public static String NavigatorGroupName_GateWay_2001_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Capteur_2001_outgoinglinks;
+	public static String NavigatorGroupName_GateWay_2001_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_GateWay_2002_incominglinks;
+	public static String NavigatorGroupName_Cloud_2002_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_GateWay_2002_outgoinglinks;
+	public static String NavigatorGroupName_Cloud_2002_outgoinglinks;
 
 	/**
 	 * @generated
@@ -348,22 +348,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_DataBase_2004_incominglinks;
+	public static String NavigatorGroupName_Capteur_2004_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_DataBase_2004_outgoinglinks;
+	public static String NavigatorGroupName_Capteur_2004_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Cloud_2005_incominglinks;
+	public static String NavigatorGroupName_DataBase_2005_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Cloud_2005_outgoinglinks;
+	public static String NavigatorGroupName_DataBase_2005_outgoinglinks;
 
 	/**
 	 * @generated

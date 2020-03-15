@@ -1,0 +1,409 @@
+	package entities.diagram.part;
+
+	/**
+ * @generated
+ */
+public class DefaultDiagramUpdater {
+		
+		/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (entities.diagram.part.DefaultVisualIDRegistry.getVisualID(view)) {
+		case entities.diagram.edit.parts.NetworkEditPart.VISUAL_ID:
+	return getNetwork_1000SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultNodeDescriptor> getNetwork_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+entities.Network modelElement = (entities.Network) view.getElement();
+	java.util.LinkedList<entities.diagram.part.DefaultNodeDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getObjectsList().iterator(); it.hasNext();) {
+		entities.Objects childElement = (entities.Objects) it.next();
+					int visualID = entities.diagram.part.DefaultVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == entities.diagram.edit.parts.GateWayEditPart.VISUAL_ID) {
+	result.add(new entities.diagram.part.DefaultNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == entities.diagram.edit.parts.CloudEditPart.VISUAL_ID) {
+	result.add(new entities.diagram.part.DefaultNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == entities.diagram.edit.parts.EntryFunctionEditPart.VISUAL_ID) {
+	result.add(new entities.diagram.part.DefaultNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == entities.diagram.edit.parts.CapteurEditPart.VISUAL_ID) {
+	result.add(new entities.diagram.part.DefaultNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == entities.diagram.edit.parts.DataBaseEditPart.VISUAL_ID) {
+	result.add(new entities.diagram.part.DefaultNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (entities.diagram.part.DefaultVisualIDRegistry.getVisualID(view)) {
+		case entities.diagram.edit.parts.NetworkEditPart.VISUAL_ID:
+	return getNetwork_1000ContainedLinks(view);
+case entities.diagram.edit.parts.GateWayEditPart.VISUAL_ID:
+	return getGateWay_2001ContainedLinks(view);
+case entities.diagram.edit.parts.CloudEditPart.VISUAL_ID:
+	return getCloud_2002ContainedLinks(view);
+case entities.diagram.edit.parts.EntryFunctionEditPart.VISUAL_ID:
+	return getEntryFunction_2003ContainedLinks(view);
+case entities.diagram.edit.parts.CapteurEditPart.VISUAL_ID:
+	return getCapteur_2004ContainedLinks(view);
+case entities.diagram.edit.parts.DataBaseEditPart.VISUAL_ID:
+	return getDataBase_2005ContainedLinks(view);
+case entities.diagram.edit.parts.LinkEditPart.VISUAL_ID:
+	return getLink_4001ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (entities.diagram.part.DefaultVisualIDRegistry.getVisualID(view)) {
+		case entities.diagram.edit.parts.GateWayEditPart.VISUAL_ID:
+	return getGateWay_2001IncomingLinks(view);
+case entities.diagram.edit.parts.CloudEditPart.VISUAL_ID:
+	return getCloud_2002IncomingLinks(view);
+case entities.diagram.edit.parts.EntryFunctionEditPart.VISUAL_ID:
+	return getEntryFunction_2003IncomingLinks(view);
+case entities.diagram.edit.parts.CapteurEditPart.VISUAL_ID:
+	return getCapteur_2004IncomingLinks(view);
+case entities.diagram.edit.parts.DataBaseEditPart.VISUAL_ID:
+	return getDataBase_2005IncomingLinks(view);
+case entities.diagram.edit.parts.LinkEditPart.VISUAL_ID:
+	return getLink_4001IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (entities.diagram.part.DefaultVisualIDRegistry.getVisualID(view)) {
+		case entities.diagram.edit.parts.GateWayEditPart.VISUAL_ID:
+	return getGateWay_2001OutgoingLinks(view);
+case entities.diagram.edit.parts.CloudEditPart.VISUAL_ID:
+	return getCloud_2002OutgoingLinks(view);
+case entities.diagram.edit.parts.EntryFunctionEditPart.VISUAL_ID:
+	return getEntryFunction_2003OutgoingLinks(view);
+case entities.diagram.edit.parts.CapteurEditPart.VISUAL_ID:
+	return getCapteur_2004OutgoingLinks(view);
+case entities.diagram.edit.parts.DataBaseEditPart.VISUAL_ID:
+	return getDataBase_2005OutgoingLinks(view);
+case entities.diagram.edit.parts.LinkEditPart.VISUAL_ID:
+	return getLink_4001OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getNetwork_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.Network modelElement = (entities.Network) view.getElement();
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Link_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getGateWay_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getCloud_2002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getEntryFunction_2003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getCapteur_2004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getDataBase_2005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getLink_4001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getGateWay_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.GateWay modelElement = (entities.GateWay) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getCloud_2002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.Cloud modelElement = (entities.Cloud) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getEntryFunction_2003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.EntryFunction modelElement = (entities.EntryFunction) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getCapteur_2004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.Capteur modelElement = (entities.Capteur) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getDataBase_2005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.DataBase modelElement = (entities.DataBase) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Link_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getLink_4001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getGateWay_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.GateWay modelElement = (entities.GateWay) view.getElement();
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getCloud_2002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.Cloud modelElement = (entities.Cloud) view.getElement();
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getEntryFunction_2003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.EntryFunction modelElement = (entities.EntryFunction) view.getElement();
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getCapteur_2004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.Capteur modelElement = (entities.Capteur) view.getElement();
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getDataBase_2005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	entities.DataBase modelElement = (entities.DataBase) view.getElement();
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Link_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<entities.diagram.part.DefaultLinkDescriptor> getLink_4001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<entities.diagram.part.DefaultLinkDescriptor> getContainedTypeModelFacetLinks_Link_4001(entities.Network container) {
+	java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getLinkList().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof entities.Link) {
+		continue;
+	}
+	entities.Link link = (entities.Link) linkObject;
+		if (entities.diagram.edit.parts.LinkEditPart.VISUAL_ID != entities.diagram.part.DefaultVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			entities.Objects dst = link.getDestination();
+							entities.Objects src = link.getSource();
+							result.add(new entities.diagram.part.DefaultLinkDescriptor(src, dst, link, entities.diagram.providers.DefaultElementTypes.Link_4001, entities.diagram.edit.parts.LinkEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+	
+/**
+ * @generated
+ */
+private static java.util.Collection<entities.diagram.part.DefaultLinkDescriptor> getIncomingTypeModelFacetLinks_Link_4001(entities.Objects target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() != entities.EntitiesPackage.eINSTANCE.getLink_Destination() || false == setting.getEObject() instanceof entities.Link) {
+	continue;
+}
+entities.Link link = (entities.Link) setting.getEObject();
+	if (entities.diagram.edit.parts.LinkEditPart.VISUAL_ID != entities.diagram.part.DefaultVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+				entities.Objects src = link.getSource();
+			result.add(new entities.diagram.part.DefaultLinkDescriptor(src, target, link, entities.diagram.providers.DefaultElementTypes.Link_4001, entities.diagram.edit.parts.LinkEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+				
+		/**
+ * @generated
+ */
+private static java.util.Collection<entities.diagram.part.DefaultLinkDescriptor> getOutgoingTypeModelFacetLinks_Link_4001(entities.Objects source) {
+	entities.Network container = null;
+	// Find container element for the link.
+	// Climb up by containment hierarchy starting from the source
+	// and return the first element that is instance of the container class.
+	for (org.eclipse.emf.ecore.EObject element = source; element != null && container == null; element = element.eContainer()) {
+		if (element instanceof entities.Network) {
+			container = (entities.Network) element;
+		}
+	}
+	if (container == null) {
+		return java.util.Collections.emptyList();
+	}
+		java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor> result = new java.util.LinkedList<entities.diagram.part.DefaultLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getLinkList().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof entities.Link) {
+		continue;
+	}
+	entities.Link link = (entities.Link) linkObject;
+		if (entities.diagram.edit.parts.LinkEditPart.VISUAL_ID != entities.diagram.part.DefaultVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			entities.Objects dst = link.getDestination();
+							entities.Objects src = link.getSource();
+								if (src != source) {
+	continue;
+}
+						result.add(new entities.diagram.part.DefaultLinkDescriptor(src, dst, link, entities.diagram.providers.DefaultElementTypes.Link_4001, entities.diagram.edit.parts.LinkEditPart.VISUAL_ID));
+		}
+	return result;	
+}		
+		
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<entities.diagram.part.DefaultNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return DefaultDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<entities.diagram.part.DefaultLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return DefaultDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<entities.diagram.part.DefaultLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return DefaultDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<entities.diagram.part.DefaultLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return DefaultDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

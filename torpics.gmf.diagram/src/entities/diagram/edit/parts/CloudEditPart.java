@@ -32,7 +32,7 @@ public class CloudEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2005;
+	public static final int VISUAL_ID = 2002;
 
 	/**
 	 * @generated
@@ -251,47 +251,7 @@ public class CloudEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureCloudIdFigure;
-		/**
-		 * @generated
-		 */
 		private WrappingLabel fFigureCloudNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCloudUrlFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCloudUserNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCloudPwdFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCloudPortFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCloudTypeFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCloudMethodFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCloudAPIKeyFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCloudChannelIDFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureCloudProtocolFigure;
 
 		/**
 		 * @generated
@@ -317,79 +277,12 @@ public class CloudEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureCloudIdFigure = new WrappingLabel();
-
-			fFigureCloudIdFigure.setText("<...>");
-
-			this.add(fFigureCloudIdFigure);
-
 			fFigureCloudNameFigure = new WrappingLabel();
 
 			fFigureCloudNameFigure.setText("<...>");
 
 			this.add(fFigureCloudNameFigure);
 
-			fFigureCloudUrlFigure = new WrappingLabel();
-
-			fFigureCloudUrlFigure.setText("<...>");
-
-			this.add(fFigureCloudUrlFigure);
-
-			fFigureCloudUserNameFigure = new WrappingLabel();
-
-			fFigureCloudUserNameFigure.setText("<...>");
-
-			this.add(fFigureCloudUserNameFigure);
-
-			fFigureCloudPwdFigure = new WrappingLabel();
-
-			fFigureCloudPwdFigure.setText("<...>");
-
-			this.add(fFigureCloudPwdFigure);
-
-			fFigureCloudPortFigure = new WrappingLabel();
-
-			fFigureCloudPortFigure.setText("<...>");
-
-			this.add(fFigureCloudPortFigure);
-
-			fFigureCloudTypeFigure = new WrappingLabel();
-
-			fFigureCloudTypeFigure.setText("<...>");
-
-			this.add(fFigureCloudTypeFigure);
-
-			fFigureCloudMethodFigure = new WrappingLabel();
-
-			fFigureCloudMethodFigure.setText("<...>");
-
-			this.add(fFigureCloudMethodFigure);
-
-			fFigureCloudAPIKeyFigure = new WrappingLabel();
-
-			fFigureCloudAPIKeyFigure.setText("<...>");
-
-			this.add(fFigureCloudAPIKeyFigure);
-
-			fFigureCloudChannelIDFigure = new WrappingLabel();
-
-			fFigureCloudChannelIDFigure.setText("<...>");
-
-			this.add(fFigureCloudChannelIDFigure);
-
-			fFigureCloudProtocolFigure = new WrappingLabel();
-
-			fFigureCloudProtocolFigure.setText("<...>");
-
-			this.add(fFigureCloudProtocolFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudIdFigure() {
-			return fFigureCloudIdFigure;
 		}
 
 		/**
@@ -397,69 +290,6 @@ public class CloudEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureCloudNameFigure() {
 			return fFigureCloudNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudUrlFigure() {
-			return fFigureCloudUrlFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudUserNameFigure() {
-			return fFigureCloudUserNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudPwdFigure() {
-			return fFigureCloudPwdFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudPortFigure() {
-			return fFigureCloudPortFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudTypeFigure() {
-			return fFigureCloudTypeFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudMethodFigure() {
-			return fFigureCloudMethodFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudAPIKeyFigure() {
-			return fFigureCloudAPIKeyFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudChannelIDFigure() {
-			return fFigureCloudChannelIDFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureCloudProtocolFigure() {
-			return fFigureCloudProtocolFigure;
 		}
 
 	}

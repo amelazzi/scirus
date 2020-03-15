@@ -31,20 +31,20 @@ public class NetworkItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (DefaultElementTypes.Capteur_2001 == req.getElementType()) {
-			return getGEFWrapper(new CapteurCreateCommand(req));
-		}
-		if (DefaultElementTypes.GateWay_2002 == req.getElementType()) {
+		if (DefaultElementTypes.GateWay_2001 == req.getElementType()) {
 			return getGEFWrapper(new GateWayCreateCommand(req));
+		}
+		if (DefaultElementTypes.Cloud_2002 == req.getElementType()) {
+			return getGEFWrapper(new CloudCreateCommand(req));
 		}
 		if (DefaultElementTypes.EntryFunction_2003 == req.getElementType()) {
 			return getGEFWrapper(new EntryFunctionCreateCommand(req));
 		}
-		if (DefaultElementTypes.DataBase_2004 == req.getElementType()) {
-			return getGEFWrapper(new DataBaseCreateCommand(req));
+		if (DefaultElementTypes.Capteur_2004 == req.getElementType()) {
+			return getGEFWrapper(new CapteurCreateCommand(req));
 		}
-		if (DefaultElementTypes.Cloud_2005 == req.getElementType()) {
-			return getGEFWrapper(new CloudCreateCommand(req));
+		if (DefaultElementTypes.DataBase_2005 == req.getElementType()) {
+			return getGEFWrapper(new DataBaseCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

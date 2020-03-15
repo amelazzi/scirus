@@ -29,7 +29,7 @@ public class DataBaseItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public DataBaseItemSemanticEditPolicy() {
-		super(DefaultElementTypes.DataBase_2004);
+		super(DefaultElementTypes.DataBase_2005);
 	}
 
 	/**

@@ -105,71 +105,11 @@
             xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="CloudIdFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
             name="CloudNameFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CloudUrlFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CloudUserNameFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CloudPwdFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CloudPortFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CloudTypeFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CloudMethodFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CloudAPIKeyFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CloudChannelIDFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="CloudProtocolFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.2"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.3"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.4"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.5"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.6"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.7"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.8"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.9"/>
-      <accessors
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.10"/>
     </descriptors>
     <descriptors
         name="GateWayFigure">
@@ -301,48 +241,38 @@
       accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels
       name="CloudId"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+      figure="CloudFigure"/>
   <labels
       name="CloudName"
       figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
   <labels
       name="CloudUrl"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.2"/>
+      figure="CloudFigure"/>
   <labels
       name="CloudUserName"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.3"/>
+      figure="CloudFigure"/>
   <labels
       name="CloudPwd"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.4"/>
+      figure="CloudFigure"/>
   <labels
       name="CloudPort"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.5"/>
+      figure="CloudFigure"/>
   <labels
       name="CloudType"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.6"/>
+      figure="CloudFigure"/>
   <labels
       name="CloudMethod"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.7"/>
+      figure="CloudFigure"/>
   <labels
       name="CloudAPIKey"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.8"/>
+      figure="CloudFigure"/>
   <labels
       name="CloudChannelID"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.9"/>
+      figure="CloudFigure"/>
   <labels
       name="CloudProtocol"
-      figure="CloudFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.10"/>
+      figure="CloudFigure"/>
   <labels
       name="GateWayId"
       figure="GateWayFigure"

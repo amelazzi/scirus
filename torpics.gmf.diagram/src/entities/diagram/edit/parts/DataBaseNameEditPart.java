@@ -58,7 +58,7 @@ public class DataBaseNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5004;
+	public static final int VISUAL_ID = 5005;
 
 	/**
 	 * @generated
@@ -308,7 +308,7 @@ public class DataBaseNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = DefaultParserProvider
 					.getParser(
-							DefaultElementTypes.DataBase_2004,
+							DefaultElementTypes.DataBase_2005,
 							getParserElement(),
 							DefaultVisualIDRegistry
 									.getType(entities.diagram.edit.parts.DataBaseNameEditPart.VISUAL_ID));

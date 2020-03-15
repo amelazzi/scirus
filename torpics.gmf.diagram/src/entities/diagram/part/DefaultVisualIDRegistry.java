@@ -131,25 +131,25 @@ public class DefaultVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case NetworkEditPart.VISUAL_ID:
-			if (EntitiesPackage.eINSTANCE.getCapteur().isSuperTypeOf(
-					domainElement.eClass())) {
-				return CapteurEditPart.VISUAL_ID;
-			}
 			if (EntitiesPackage.eINSTANCE.getGateWay().isSuperTypeOf(
 					domainElement.eClass())) {
 				return GateWayEditPart.VISUAL_ID;
+			}
+			if (EntitiesPackage.eINSTANCE.getCloud().isSuperTypeOf(
+					domainElement.eClass())) {
+				return CloudEditPart.VISUAL_ID;
 			}
 			if (EntitiesPackage.eINSTANCE.getEntryFunction().isSuperTypeOf(
 					domainElement.eClass())) {
 				return EntryFunctionEditPart.VISUAL_ID;
 			}
+			if (EntitiesPackage.eINSTANCE.getCapteur().isSuperTypeOf(
+					domainElement.eClass())) {
+				return CapteurEditPart.VISUAL_ID;
+			}
 			if (EntitiesPackage.eINSTANCE.getDataBase().isSuperTypeOf(
 					domainElement.eClass())) {
 				return DataBaseEditPart.VISUAL_ID;
-			}
-			if (EntitiesPackage.eINSTANCE.getCloud().isSuperTypeOf(
-					domainElement.eClass())) {
-				return CloudEditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -178,24 +178,19 @@ public class DefaultVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case NetworkEditPart.VISUAL_ID:
-			if (CapteurEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			if (GateWayEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (EntryFunctionEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (DataBaseEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (CloudEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			break;
-		case CapteurEditPart.VISUAL_ID:
-			if (CapteurNameEditPart.VISUAL_ID == nodeVisualID) {
+			if (EntryFunctionEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (CapteurEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (DataBaseEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -204,18 +199,23 @@ public class DefaultVisualIDRegistry {
 				return true;
 			}
 			break;
+		case CloudEditPart.VISUAL_ID:
+			if (CloudNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case EntryFunctionEditPart.VISUAL_ID:
 			if (EntryFunctionTypeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case DataBaseEditPart.VISUAL_ID:
-			if (DataBaseNameEditPart.VISUAL_ID == nodeVisualID) {
+		case CapteurEditPart.VISUAL_ID:
+			if (CapteurNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case CloudEditPart.VISUAL_ID:
-			if (CloudNameEditPart.VISUAL_ID == nodeVisualID) {
+		case DataBaseEditPart.VISUAL_ID:
+			if (DataBaseNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -279,11 +279,11 @@ public class DefaultVisualIDRegistry {
 		switch (visualID) {
 		case NetworkEditPart.VISUAL_ID:
 			return false;
-		case CapteurEditPart.VISUAL_ID:
 		case GateWayEditPart.VISUAL_ID:
-		case EntryFunctionEditPart.VISUAL_ID:
-		case DataBaseEditPart.VISUAL_ID:
 		case CloudEditPart.VISUAL_ID:
+		case EntryFunctionEditPart.VISUAL_ID:
+		case CapteurEditPart.VISUAL_ID:
+		case DataBaseEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;
