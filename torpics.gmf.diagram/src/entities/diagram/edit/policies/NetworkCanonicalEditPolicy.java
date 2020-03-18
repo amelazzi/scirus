@@ -96,11 +96,11 @@ public class NetworkCanonicalEditPolicy extends CanonicalEditPolicy {
 	private boolean isMyDiagramElement(View view) {
 		int visualID = DefaultVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case GateWayEditPart.VISUAL_ID:
-		case CloudEditPart.VISUAL_ID:
 		case EntryFunctionEditPart.VISUAL_ID:
 		case CapteurEditPart.VISUAL_ID:
 		case DataBaseEditPart.VISUAL_ID:
+		case CloudEditPart.VISUAL_ID:
+		case GateWayEditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -259,26 +259,10 @@ public class NetworkCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case GateWayEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(DefaultDiagramUpdater
-						.getGateWay_2001ContainedLinks(view));
-			}
-			domain2NotationMap.putView(view.getElement(), view);
-			break;
-		}
-		case CloudEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(DefaultDiagramUpdater
-						.getCloud_2002ContainedLinks(view));
-			}
-			domain2NotationMap.putView(view.getElement(), view);
-			break;
-		}
 		case EntryFunctionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(DefaultDiagramUpdater
-						.getEntryFunction_2003ContainedLinks(view));
+						.getEntryFunction_2001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -286,7 +270,7 @@ public class NetworkCanonicalEditPolicy extends CanonicalEditPolicy {
 		case CapteurEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(DefaultDiagramUpdater
-						.getCapteur_2004ContainedLinks(view));
+						.getCapteur_2002ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -294,7 +278,23 @@ public class NetworkCanonicalEditPolicy extends CanonicalEditPolicy {
 		case DataBaseEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(DefaultDiagramUpdater
-						.getDataBase_2005ContainedLinks(view));
+						.getDataBase_2003ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case CloudEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(DefaultDiagramUpdater
+						.getCloud_2004ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case GateWayEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(DefaultDiagramUpdater
+						.getGateWay_2005ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

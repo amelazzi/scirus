@@ -120,17 +120,11 @@
             xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="GateWayIdFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
             name="GateWayNameFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="EntryFunctionFigure">
@@ -275,12 +269,11 @@
       figure="CloudFigure"/>
   <labels
       name="GateWayId"
-      figure="GateWayFigure"
-      accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+      figure="GateWayFigure"/>
   <labels
       name="GateWayName"
       figure="GateWayFigure"
-      accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.4/@accessors.0"/>
   <labels
       name="EntryFunctionId"
       figure="EntryFunctionFigure"

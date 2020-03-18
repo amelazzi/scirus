@@ -318,52 +318,52 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_GateWay_2001_incominglinks;
+	public static String NavigatorGroupName_EntryFunction_2001_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_GateWay_2001_outgoinglinks;
+	public static String NavigatorGroupName_EntryFunction_2001_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Cloud_2002_incominglinks;
+	public static String NavigatorGroupName_Capteur_2002_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Cloud_2002_outgoinglinks;
+	public static String NavigatorGroupName_Capteur_2002_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EntryFunction_2003_incominglinks;
+	public static String NavigatorGroupName_DataBase_2003_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_EntryFunction_2003_outgoinglinks;
+	public static String NavigatorGroupName_DataBase_2003_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Capteur_2004_incominglinks;
+	public static String NavigatorGroupName_Cloud_2004_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Capteur_2004_outgoinglinks;
+	public static String NavigatorGroupName_Cloud_2004_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_DataBase_2005_incominglinks;
+	public static String NavigatorGroupName_GateWay_2005_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_DataBase_2005_outgoinglinks;
+	public static String NavigatorGroupName_GateWay_2005_outgoinglinks;
 
 	/**
 	 * @generated

@@ -58,7 +58,7 @@ public class CloudNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5002;
+	public static final int VISUAL_ID = 5004;
 
 	/**
 	 * @generated
@@ -308,7 +308,7 @@ public class CloudNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = DefaultParserProvider
 					.getParser(
-							DefaultElementTypes.Cloud_2002,
+							DefaultElementTypes.Cloud_2004,
 							getParserElement(),
 							DefaultVisualIDRegistry
 									.getType(entities.diagram.edit.parts.CloudNameEditPart.VISUAL_ID));

@@ -29,7 +29,7 @@ public class CloudItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public CloudItemSemanticEditPolicy() {
-		super(DefaultElementTypes.Cloud_2002);
+		super(DefaultElementTypes.Cloud_2004);
 	}
 
 	/**

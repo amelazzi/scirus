@@ -231,14 +231,6 @@ public class DefaultNavigatorContentProvider implements ICommonContentProvider {
 					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getChildrenByType(Collections.singleton(sv),
-					DefaultVisualIDRegistry.getType(GateWayEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
-					DefaultVisualIDRegistry.getType(CloudEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(Collections.singleton(sv),
 					DefaultVisualIDRegistry
 							.getType(EntryFunctionEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
@@ -251,6 +243,14 @@ public class DefaultNavigatorContentProvider implements ICommonContentProvider {
 					DefaultVisualIDRegistry.getType(DataBaseEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					DefaultVisualIDRegistry.getType(CloudEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					DefaultVisualIDRegistry.getType(GateWayEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					DefaultVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
@@ -260,68 +260,14 @@ public class DefaultNavigatorContentProvider implements ICommonContentProvider {
 			return result.toArray();
 		}
 
-		case GateWayEditPart.VISUAL_ID: {
-			LinkedList<DefaultAbstractNavigatorItem> result = new LinkedList<DefaultAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			DefaultNavigatorGroup incominglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_GateWay_2001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			DefaultNavigatorGroup outgoinglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_GateWay_2001_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					DefaultVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					DefaultVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case CloudEditPart.VISUAL_ID: {
-			LinkedList<DefaultAbstractNavigatorItem> result = new LinkedList<DefaultAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			DefaultNavigatorGroup incominglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_Cloud_2002_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			DefaultNavigatorGroup outgoinglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_Cloud_2002_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					DefaultVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					DefaultVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
 		case EntryFunctionEditPart.VISUAL_ID: {
 			LinkedList<DefaultAbstractNavigatorItem> result = new LinkedList<DefaultAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			DefaultNavigatorGroup incominglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_EntryFunction_2003_incominglinks,
+					Messages.NavigatorGroupName_EntryFunction_2001_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			DefaultNavigatorGroup outgoinglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_EntryFunction_2003_outgoinglinks,
+					Messages.NavigatorGroupName_EntryFunction_2001_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -345,10 +291,10 @@ public class DefaultNavigatorContentProvider implements ICommonContentProvider {
 			LinkedList<DefaultAbstractNavigatorItem> result = new LinkedList<DefaultAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			DefaultNavigatorGroup incominglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_Capteur_2004_incominglinks,
+					Messages.NavigatorGroupName_Capteur_2002_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			DefaultNavigatorGroup outgoinglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_Capteur_2004_outgoinglinks,
+					Messages.NavigatorGroupName_Capteur_2002_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -372,10 +318,64 @@ public class DefaultNavigatorContentProvider implements ICommonContentProvider {
 			LinkedList<DefaultAbstractNavigatorItem> result = new LinkedList<DefaultAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			DefaultNavigatorGroup incominglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_DataBase_2005_incominglinks,
+					Messages.NavigatorGroupName_DataBase_2003_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			DefaultNavigatorGroup outgoinglinks = new DefaultNavigatorGroup(
-					Messages.NavigatorGroupName_DataBase_2005_outgoinglinks,
+					Messages.NavigatorGroupName_DataBase_2003_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					DefaultVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					DefaultVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case CloudEditPart.VISUAL_ID: {
+			LinkedList<DefaultAbstractNavigatorItem> result = new LinkedList<DefaultAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			DefaultNavigatorGroup incominglinks = new DefaultNavigatorGroup(
+					Messages.NavigatorGroupName_Cloud_2004_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			DefaultNavigatorGroup outgoinglinks = new DefaultNavigatorGroup(
+					Messages.NavigatorGroupName_Cloud_2004_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					DefaultVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					DefaultVisualIDRegistry.getType(LinkEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case GateWayEditPart.VISUAL_ID: {
+			LinkedList<DefaultAbstractNavigatorItem> result = new LinkedList<DefaultAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			DefaultNavigatorGroup incominglinks = new DefaultNavigatorGroup(
+					Messages.NavigatorGroupName_GateWay_2005_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			DefaultNavigatorGroup outgoinglinks = new DefaultNavigatorGroup(
+					Messages.NavigatorGroupName_GateWay_2005_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -406,14 +406,6 @@ public class DefaultNavigatorContentProvider implements ICommonContentProvider {
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					DefaultVisualIDRegistry.getType(GateWayEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
-					DefaultVisualIDRegistry.getType(CloudEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					DefaultVisualIDRegistry
 							.getType(EntryFunctionEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
@@ -426,13 +418,13 @@ public class DefaultNavigatorContentProvider implements ICommonContentProvider {
 					DefaultVisualIDRegistry.getType(DataBaseEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					DefaultVisualIDRegistry.getType(GateWayEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					DefaultVisualIDRegistry.getType(CloudEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					DefaultVisualIDRegistry.getType(GateWayEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					DefaultVisualIDRegistry
@@ -445,6 +437,14 @@ public class DefaultNavigatorContentProvider implements ICommonContentProvider {
 					true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					DefaultVisualIDRegistry.getType(DataBaseEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					DefaultVisualIDRegistry.getType(CloudEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					DefaultVisualIDRegistry.getType(GateWayEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
