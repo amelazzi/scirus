@@ -29,7 +29,7 @@ public class EntryFunctionItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public EntryFunctionItemSemanticEditPolicy() {
-		super(DefaultElementTypes.EntryFunction_2001);
+		super(DefaultElementTypes.EntryFunction_2005);
 	}
 
 	/**

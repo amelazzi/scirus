@@ -135,35 +135,11 @@
             xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="EntryFunctionIdFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
             name="EntryFunctionTypeFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="EntryFunctionThresholdFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="EntryFunctionMetricFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="EntryFunctionPeriodFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
-      <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
-      <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.3"/>
-      <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.4"/>
     </descriptors>
   </figures>
   <nodes
@@ -276,22 +252,18 @@
       accessor="//@figures.0/@descriptors.4/@accessors.0"/>
   <labels
       name="EntryFunctionId"
-      figure="EntryFunctionFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+      figure="EntryFunctionFigure"/>
   <labels
       name="EntryFunctionType"
       figure="EntryFunctionFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.1"/>
+      accessor="//@figures.0/@descriptors.5/@accessors.0"/>
   <labels
       name="EntryFunctionThreshold"
-      figure="EntryFunctionFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.2"/>
+      figure="EntryFunctionFigure"/>
   <labels
       name="EntryFunctionMetric"
-      figure="EntryFunctionFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.3"/>
+      figure="EntryFunctionFigure"/>
   <labels
       name="EntryFunctionPeriod"
-      figure="EntryFunctionFigure"
-      accessor="//@figures.0/@descriptors.5/@accessors.4"/>
+      figure="EntryFunctionFigure"/>
 </gmfgraph:Canvas>

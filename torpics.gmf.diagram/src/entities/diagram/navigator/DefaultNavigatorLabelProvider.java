@@ -96,21 +96,21 @@ public class DefaultNavigatorLabelProvider extends LabelProvider implements
 		case NetworkEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?torpics?Network", DefaultElementTypes.Network_1000); //$NON-NLS-1$
-		case EntryFunctionEditPart.VISUAL_ID:
+		case GateWayEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?torpics?EntryFunction", DefaultElementTypes.EntryFunction_2001); //$NON-NLS-1$
+					"Navigator?TopLevelNode?torpics?GateWay", DefaultElementTypes.GateWay_2001); //$NON-NLS-1$
 		case CapteurEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?torpics?Capteur", DefaultElementTypes.Capteur_2002); //$NON-NLS-1$
-		case DataBaseEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?torpics?DataBase", DefaultElementTypes.DataBase_2003); //$NON-NLS-1$
 		case CloudEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?torpics?Cloud", DefaultElementTypes.Cloud_2004); //$NON-NLS-1$
-		case GateWayEditPart.VISUAL_ID:
+					"Navigator?TopLevelNode?torpics?Cloud", DefaultElementTypes.Cloud_2003); //$NON-NLS-1$
+		case DataBaseEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?torpics?GateWay", DefaultElementTypes.GateWay_2005); //$NON-NLS-1$
+					"Navigator?TopLevelNode?torpics?DataBase", DefaultElementTypes.DataBase_2004); //$NON-NLS-1$
+		case EntryFunctionEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?torpics?EntryFunction", DefaultElementTypes.EntryFunction_2005); //$NON-NLS-1$
 		case LinkEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?torpics?Link", DefaultElementTypes.Link_4001); //$NON-NLS-1$
@@ -168,16 +168,16 @@ public class DefaultNavigatorLabelProvider extends LabelProvider implements
 		switch (DefaultVisualIDRegistry.getVisualID(view)) {
 		case NetworkEditPart.VISUAL_ID:
 			return getNetwork_1000Text(view);
-		case EntryFunctionEditPart.VISUAL_ID:
-			return getEntryFunction_2001Text(view);
+		case GateWayEditPart.VISUAL_ID:
+			return getGateWay_2001Text(view);
 		case CapteurEditPart.VISUAL_ID:
 			return getCapteur_2002Text(view);
-		case DataBaseEditPart.VISUAL_ID:
-			return getDataBase_2003Text(view);
 		case CloudEditPart.VISUAL_ID:
-			return getCloud_2004Text(view);
-		case GateWayEditPart.VISUAL_ID:
-			return getGateWay_2005Text(view);
+			return getCloud_2003Text(view);
+		case DataBaseEditPart.VISUAL_ID:
+			return getDataBase_2004Text(view);
+		case EntryFunctionEditPart.VISUAL_ID:
+			return getEntryFunction_2005Text(view);
 		case LinkEditPart.VISUAL_ID:
 			return getLink_4001Text(view);
 		}
@@ -194,12 +194,11 @@ public class DefaultNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getEntryFunction_2001Text(View view) {
+	private String getGateWay_2001Text(View view) {
 		IParser parser = DefaultParserProvider.getParser(
-				DefaultElementTypes.EntryFunction_2001,
+				DefaultElementTypes.GateWay_2001,
 				view.getElement() != null ? view.getElement() : view,
-				DefaultVisualIDRegistry
-						.getType(EntryFunctionTypeEditPart.VISUAL_ID));
+				DefaultVisualIDRegistry.getType(GateWayNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -233,12 +232,11 @@ public class DefaultNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getDataBase_2003Text(View view) {
-		IParser parser = DefaultParserProvider
-				.getParser(DefaultElementTypes.DataBase_2003,
-						view.getElement() != null ? view.getElement() : view,
-						DefaultVisualIDRegistry
-								.getType(DataBaseNameEditPart.VISUAL_ID));
+	private String getCloud_2003Text(View view) {
+		IParser parser = DefaultParserProvider.getParser(
+				DefaultElementTypes.Cloud_2003,
+				view.getElement() != null ? view.getElement() : view,
+				DefaultVisualIDRegistry.getType(CloudNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -253,11 +251,12 @@ public class DefaultNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getCloud_2004Text(View view) {
-		IParser parser = DefaultParserProvider.getParser(
-				DefaultElementTypes.Cloud_2004,
-				view.getElement() != null ? view.getElement() : view,
-				DefaultVisualIDRegistry.getType(CloudNameEditPart.VISUAL_ID));
+	private String getDataBase_2004Text(View view) {
+		IParser parser = DefaultParserProvider
+				.getParser(DefaultElementTypes.DataBase_2004,
+						view.getElement() != null ? view.getElement() : view,
+						DefaultVisualIDRegistry
+								.getType(DataBaseNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -272,11 +271,12 @@ public class DefaultNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getGateWay_2005Text(View view) {
+	private String getEntryFunction_2005Text(View view) {
 		IParser parser = DefaultParserProvider.getParser(
-				DefaultElementTypes.GateWay_2005,
+				DefaultElementTypes.EntryFunction_2005,
 				view.getElement() != null ? view.getElement() : view,
-				DefaultVisualIDRegistry.getType(GateWayNameEditPart.VISUAL_ID));
+				DefaultVisualIDRegistry
+						.getType(EntryFunctionTypeEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),

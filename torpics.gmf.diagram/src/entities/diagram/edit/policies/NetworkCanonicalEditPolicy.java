@@ -96,11 +96,11 @@ public class NetworkCanonicalEditPolicy extends CanonicalEditPolicy {
 	private boolean isMyDiagramElement(View view) {
 		int visualID = DefaultVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case EntryFunctionEditPart.VISUAL_ID:
-		case CapteurEditPart.VISUAL_ID:
-		case DataBaseEditPart.VISUAL_ID:
-		case CloudEditPart.VISUAL_ID:
 		case GateWayEditPart.VISUAL_ID:
+		case CapteurEditPart.VISUAL_ID:
+		case CloudEditPart.VISUAL_ID:
+		case DataBaseEditPart.VISUAL_ID:
+		case EntryFunctionEditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -259,10 +259,10 @@ public class NetworkCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case EntryFunctionEditPart.VISUAL_ID: {
+		case GateWayEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(DefaultDiagramUpdater
-						.getEntryFunction_2001ContainedLinks(view));
+						.getGateWay_2001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -275,26 +275,26 @@ public class NetworkCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case DataBaseEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(DefaultDiagramUpdater
-						.getDataBase_2003ContainedLinks(view));
-			}
-			domain2NotationMap.putView(view.getElement(), view);
-			break;
-		}
 		case CloudEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(DefaultDiagramUpdater
-						.getCloud_2004ContainedLinks(view));
+						.getCloud_2003ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case GateWayEditPart.VISUAL_ID: {
+		case DataBaseEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(DefaultDiagramUpdater
-						.getGateWay_2005ContainedLinks(view));
+						.getDataBase_2004ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case EntryFunctionEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(DefaultDiagramUpdater
+						.getEntryFunction_2005ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

@@ -33,19 +33,19 @@ public class DefaultParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser entryFunctionType_5001Parser;
+	private IParser gateWayName_5001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getEntryFunctionType_5001Parser() {
-		if (entryFunctionType_5001Parser == null) {
-			EAttribute editableFeature = EntitiesPackage.eINSTANCE
-					.getEntryFunction_Type();
-			EnumParser parser = new EnumParser(editableFeature);
-			entryFunctionType_5001Parser = parser;
+	private IParser getGateWayName_5001Parser() {
+		if (gateWayName_5001Parser == null) {
+			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
+					.getDevice_Name() };
+			MessageFormatParser parser = new MessageFormatParser(features);
+			gateWayName_5001Parser = parser;
 		}
-		return entryFunctionType_5001Parser;
+		return gateWayName_5001Parser;
 	}
 
 	/**
@@ -69,55 +69,55 @@ public class DefaultParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser dataBaseName_5003Parser;
+	private IParser cloudName_5003Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getDataBaseName_5003Parser() {
-		if (dataBaseName_5003Parser == null) {
+	private IParser getCloudName_5003Parser() {
+		if (cloudName_5003Parser == null) {
 			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
 					.getDevice_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			dataBaseName_5003Parser = parser;
+			cloudName_5003Parser = parser;
 		}
-		return dataBaseName_5003Parser;
+		return cloudName_5003Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser cloudName_5004Parser;
+	private IParser dataBaseName_5004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCloudName_5004Parser() {
-		if (cloudName_5004Parser == null) {
+	private IParser getDataBaseName_5004Parser() {
+		if (dataBaseName_5004Parser == null) {
 			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
 					.getDevice_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			cloudName_5004Parser = parser;
+			dataBaseName_5004Parser = parser;
 		}
-		return cloudName_5004Parser;
+		return dataBaseName_5004Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser gateWayName_5005Parser;
+	private IParser entryFunctionType_5005Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getGateWayName_5005Parser() {
-		if (gateWayName_5005Parser == null) {
-			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
-					.getDevice_Name() };
-			MessageFormatParser parser = new MessageFormatParser(features);
-			gateWayName_5005Parser = parser;
+	private IParser getEntryFunctionType_5005Parser() {
+		if (entryFunctionType_5005Parser == null) {
+			EAttribute editableFeature = EntitiesPackage.eINSTANCE
+					.getEntryFunction_Type();
+			EnumParser parser = new EnumParser(editableFeature);
+			entryFunctionType_5005Parser = parser;
 		}
-		return gateWayName_5005Parser;
+		return entryFunctionType_5005Parser;
 	}
 
 	/**
@@ -143,17 +143,17 @@ public class DefaultParserProvider extends AbstractProvider implements
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-
-		case EntryFunctionTypeEditPart.VISUAL_ID:
-			return getEntryFunctionType_5001Parser();
+		case GateWayNameEditPart.VISUAL_ID:
+			return getGateWayName_5001Parser();
 		case CapteurNameEditPart.VISUAL_ID:
 			return getCapteurName_5002Parser();
-		case DataBaseNameEditPart.VISUAL_ID:
-			return getDataBaseName_5003Parser();
 		case CloudNameEditPart.VISUAL_ID:
-			return getCloudName_5004Parser();
-		case GateWayNameEditPart.VISUAL_ID:
-			return getGateWayName_5005Parser();
+			return getCloudName_5003Parser();
+		case DataBaseNameEditPart.VISUAL_ID:
+			return getDataBaseName_5004Parser();
+
+		case EntryFunctionTypeEditPart.VISUAL_ID:
+			return getEntryFunctionType_5005Parser();
 		case LinkNameEditPart.VISUAL_ID:
 			return getLinkName_6001Parser();
 		}

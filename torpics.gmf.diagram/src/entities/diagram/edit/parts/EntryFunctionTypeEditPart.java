@@ -57,7 +57,7 @@ public class EntryFunctionTypeEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5001;
+	public static final int VISUAL_ID = 5005;
 
 	/**
 	 * @generated
@@ -307,7 +307,7 @@ public class EntryFunctionTypeEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = DefaultParserProvider
 					.getParser(
-							DefaultElementTypes.EntryFunction_2001,
+							DefaultElementTypes.EntryFunction_2005,
 							getParserElement(),
 							DefaultVisualIDRegistry
 									.getType(entities.diagram.edit.parts.EntryFunctionTypeEditPart.VISUAL_ID));

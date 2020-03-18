@@ -1,0 +1,76 @@
+package entities.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class DefaultEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (entities.diagram.part.DefaultVisualIDRegistry.getVisualID(view)) {
+				
+	case entities.diagram.edit.parts.NetworkEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.NetworkEditPart(view);
+									
+	case entities.diagram.edit.parts.GateWayEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.GateWayEditPart(view);
+					
+	case entities.diagram.edit.parts.GateWayNameEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.GateWayNameEditPart(view);
+									
+	case entities.diagram.edit.parts.CapteurEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.CapteurEditPart(view);
+					
+	case entities.diagram.edit.parts.CapteurNameEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.CapteurNameEditPart(view);
+									
+	case entities.diagram.edit.parts.CloudEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.CloudEditPart(view);
+					
+	case entities.diagram.edit.parts.CloudNameEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.CloudNameEditPart(view);
+									
+	case entities.diagram.edit.parts.DataBaseEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.DataBaseEditPart(view);
+					
+	case entities.diagram.edit.parts.DataBaseNameEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.DataBaseNameEditPart(view);
+									
+	case entities.diagram.edit.parts.EntryFunctionEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.EntryFunctionEditPart(view);
+					
+	case entities.diagram.edit.parts.EntryFunctionTypeEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.EntryFunctionTypeEditPart(view);
+																	
+	case entities.diagram.edit.parts.LinkEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.LinkEditPart(view);
+					
+	case entities.diagram.edit.parts.LinkNameEditPart.VISUAL_ID:
+		return new entities.diagram.edit.parts.LinkNameEditPart(view);
+
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

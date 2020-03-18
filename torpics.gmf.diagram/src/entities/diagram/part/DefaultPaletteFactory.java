@@ -62,10 +62,10 @@ public class DefaultPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				Messages.DataBase2CreationTool_title,
 				Messages.DataBase2CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.DataBase_2003));
+				Collections.singletonList(DefaultElementTypes.DataBase_2004));
 		entry.setId("createDataBase2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.DataBase_2003));
+				.getImageDescriptor(DefaultElementTypes.DataBase_2004));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -92,10 +92,10 @@ public class DefaultPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				Messages.Cloud4CreationTool_title,
 				Messages.Cloud4CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.Cloud_2004));
+				Collections.singletonList(DefaultElementTypes.Cloud_2003));
 		entry.setId("createCloud4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.Cloud_2004));
+				.getImageDescriptor(DefaultElementTypes.Cloud_2003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -107,10 +107,10 @@ public class DefaultPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				Messages.GateWay5CreationTool_title,
 				Messages.GateWay5CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.GateWay_2005));
+				Collections.singletonList(DefaultElementTypes.GateWay_2001));
 		entry.setId("createGateWay5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.GateWay_2005));
+				.getImageDescriptor(DefaultElementTypes.GateWay_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -123,10 +123,10 @@ public class DefaultPaletteFactory {
 				Messages.EntryFunction6CreationTool_title,
 				Messages.EntryFunction6CreationTool_desc,
 				Collections
-						.singletonList(DefaultElementTypes.EntryFunction_2001));
+						.singletonList(DefaultElementTypes.EntryFunction_2005));
 		entry.setId("createEntryFunction6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.EntryFunction_2001));
+				.getImageDescriptor(DefaultElementTypes.EntryFunction_2005));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

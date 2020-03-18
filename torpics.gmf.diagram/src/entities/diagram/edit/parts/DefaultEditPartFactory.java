@@ -25,11 +25,11 @@ public class DefaultEditPartFactory implements EditPartFactory {
 			case NetworkEditPart.VISUAL_ID:
 				return new NetworkEditPart(view);
 
-			case EntryFunctionEditPart.VISUAL_ID:
-				return new EntryFunctionEditPart(view);
+			case GateWayEditPart.VISUAL_ID:
+				return new GateWayEditPart(view);
 
-			case EntryFunctionTypeEditPart.VISUAL_ID:
-				return new EntryFunctionTypeEditPart(view);
+			case GateWayNameEditPart.VISUAL_ID:
+				return new GateWayNameEditPart(view);
 
 			case CapteurEditPart.VISUAL_ID:
 				return new CapteurEditPart(view);
@@ -37,23 +37,23 @@ public class DefaultEditPartFactory implements EditPartFactory {
 			case CapteurNameEditPart.VISUAL_ID:
 				return new CapteurNameEditPart(view);
 
-			case DataBaseEditPart.VISUAL_ID:
-				return new DataBaseEditPart(view);
-
-			case DataBaseNameEditPart.VISUAL_ID:
-				return new DataBaseNameEditPart(view);
-
 			case CloudEditPart.VISUAL_ID:
 				return new CloudEditPart(view);
 
 			case CloudNameEditPart.VISUAL_ID:
 				return new CloudNameEditPart(view);
 
-			case GateWayEditPart.VISUAL_ID:
-				return new GateWayEditPart(view);
+			case DataBaseEditPart.VISUAL_ID:
+				return new DataBaseEditPart(view);
 
-			case GateWayNameEditPart.VISUAL_ID:
-				return new GateWayNameEditPart(view);
+			case DataBaseNameEditPart.VISUAL_ID:
+				return new DataBaseNameEditPart(view);
+
+			case EntryFunctionEditPart.VISUAL_ID:
+				return new EntryFunctionEditPart(view);
+
+			case EntryFunctionTypeEditPart.VISUAL_ID:
+				return new EntryFunctionTypeEditPart(view);
 
 			case LinkEditPart.VISUAL_ID:
 				return new LinkEditPart(view);
