@@ -11,31 +11,11 @@
         href="default.ecore#//Network/objectsList"/>
     <ownedChild>
       <domainMetaElement
-          href="default.ecore#//GateWay"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="default.gmfgraph#GateWayName"/>
-        <features
-            href="default.ecore#//Device/name"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="default.gmftool#//@palette/@tools.0/@tools.4"/>
-      <diagramNode
-          href="default.gmfgraph#GateWay"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="default.ecore#//Network/objectsList"/>
-    <ownedChild>
-      <domainMetaElement
           href="default.ecore#//Capteur"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="default.gmfgraph#CapteurName"/>
+            href="default.gmfgraph#CapteurId"/>
         <features
             href="default.ecore#//Device/name"/>
       </labelMappings>
@@ -51,17 +31,37 @@
         href="default.ecore#//Network/objectsList"/>
     <ownedChild>
       <domainMetaElement
-          href="default.ecore#//Cloud"/>
+          href="default.ecore#//DataBase"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="default.gmfgraph#CloudName"/>
+            href="default.gmfgraph#DataBaseId"/>
         <features
             href="default.ecore#//Device/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="default.gmftool#//@palette/@tools.0/@tools.3"/>
+          href="default.gmftool#//@palette/@tools.0/@tools.1"/>
+      <diagramNode
+          href="default.gmfgraph#DataBase"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="default.ecore#//Network/objectsList"/>
+    <ownedChild>
+      <domainMetaElement
+          href="default.ecore#//Cloud"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="default.gmfgraph#CloudId"/>
+        <features
+            href="default.ecore#//Device/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="default.gmftool#//@palette/@tools.0/@tools.2"/>
       <diagramNode
           href="default.gmfgraph#Cloud"/>
     </ownedChild>
@@ -71,19 +71,19 @@
         href="default.ecore#//Network/objectsList"/>
     <ownedChild>
       <domainMetaElement
-          href="default.ecore#//DataBase"/>
+          href="default.ecore#//GateWay"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="default.gmfgraph#DataBaseName"/>
+            href="default.gmfgraph#GateWayId"/>
         <features
             href="default.ecore#//Device/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="default.gmftool#//@palette/@tools.0/@tools.1"/>
+          href="default.gmftool#//@palette/@tools.0/@tools.3"/>
       <diagramNode
-          href="default.gmfgraph#DataBase"/>
+          href="default.gmfgraph#GateWay"/>
     </ownedChild>
   </nodes>
   <nodes>
@@ -101,7 +101,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="default.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="default.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
           href="default.gmfgraph#EntryFunction"/>
     </ownedChild>
@@ -120,7 +120,7 @@
         href="default.ecore#//Network/linkList"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="default.gmftool#//@palette/@tools.0/@tools.2"/>
+        href="default.gmftool#//@palette/@tools.0/@tools.5"/>
     <diagramLink
         href="default.gmfgraph#Link"/>
     <sourceMetaFeature

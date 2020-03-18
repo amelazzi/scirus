@@ -33,37 +33,37 @@ public class DefaultParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser gateWayName_5001Parser;
+	private IParser capteurName_5001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getGateWayName_5001Parser() {
-		if (gateWayName_5001Parser == null) {
+	private IParser getCapteurName_5001Parser() {
+		if (capteurName_5001Parser == null) {
 			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
 					.getDevice_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			gateWayName_5001Parser = parser;
+			capteurName_5001Parser = parser;
 		}
-		return gateWayName_5001Parser;
+		return capteurName_5001Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser capteurName_5002Parser;
+	private IParser dataBaseName_5002Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCapteurName_5002Parser() {
-		if (capteurName_5002Parser == null) {
+	private IParser getDataBaseName_5002Parser() {
+		if (dataBaseName_5002Parser == null) {
 			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
 					.getDevice_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			capteurName_5002Parser = parser;
+			dataBaseName_5002Parser = parser;
 		}
-		return capteurName_5002Parser;
+		return dataBaseName_5002Parser;
 	}
 
 	/**
@@ -87,19 +87,19 @@ public class DefaultParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser dataBaseName_5004Parser;
+	private IParser gateWayName_5004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getDataBaseName_5004Parser() {
-		if (dataBaseName_5004Parser == null) {
+	private IParser getGateWayName_5004Parser() {
+		if (gateWayName_5004Parser == null) {
 			EAttribute[] features = new EAttribute[] { EntitiesPackage.eINSTANCE
 					.getDevice_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			dataBaseName_5004Parser = parser;
+			gateWayName_5004Parser = parser;
 		}
-		return dataBaseName_5004Parser;
+		return gateWayName_5004Parser;
 	}
 
 	/**
@@ -143,14 +143,14 @@ public class DefaultParserProvider extends AbstractProvider implements
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case GateWayNameEditPart.VISUAL_ID:
-			return getGateWayName_5001Parser();
 		case CapteurNameEditPart.VISUAL_ID:
-			return getCapteurName_5002Parser();
+			return getCapteurName_5001Parser();
+		case DataBaseNameEditPart.VISUAL_ID:
+			return getDataBaseName_5002Parser();
 		case CloudNameEditPart.VISUAL_ID:
 			return getCloudName_5003Parser();
-		case DataBaseNameEditPart.VISUAL_ID:
-			return getDataBaseName_5004Parser();
+		case GateWayNameEditPart.VISUAL_ID:
+			return getGateWayName_5004Parser();
 
 		case EntryFunctionTypeEditPart.VISUAL_ID:
 			return getEntryFunctionType_5005Parser();

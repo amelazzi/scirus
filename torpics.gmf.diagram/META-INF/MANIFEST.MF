@@ -3,13 +3,30 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: torpics.gmf.diagram; singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-ClassPath: .
+Bundle-ClassPath: .,
+ src/slf4j-api-1.7.25.jar,
+ src/mainpack/commons-codec-1.6.jar,
+ src/mainpack/commons-logging-1.1.3.jar,
+ src/mainpack/gson-2.8.0.jar,
+ src/mainpack/httpasyncclient-4.0.2.jar,
+ src/mainpack/httpclient-4.3.6.jar,
+ src/mainpack/httpcore-4.3.3.jar,
+ src/mainpack/httpcore-nio-4.3.2.jar,
+ src/mainpack/httpmime-4.3.6.jar,
+ src/mainpack/json-20160212.jar,
+ src/mainpack/json-parse-1.3.4.jar,
+ src/mainpack/json-simple-2.3.0.jar,
+ src/mainpack/mysql-connector-java-3.0.16-ga-bin.jar,
+ src/mainpack/org.eclipse.paho.client.mqttv3-1.1.1.jar,
+ src/mainpack/unirest-java-1.5.0.jar,
+ src/slf4j-nop-1.7.25.jar
 Bundle-Activator: entities.diagram.part.DefaultDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Export-Package: entities.diagram.edit.parts, 
  entities.diagram.part,
  entities.diagram.providers
+ 
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,

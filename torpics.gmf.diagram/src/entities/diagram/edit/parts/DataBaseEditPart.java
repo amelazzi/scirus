@@ -32,7 +32,7 @@ public class DataBaseEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2004;
+	public static final int VISUAL_ID = 2002;
 
 	/**
 	 * @generated
@@ -106,7 +106,7 @@ public class DataBaseEditPart extends ShapeNodeEditPart {
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof DataBaseNameEditPart) {
 			((DataBaseNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureDataBaseNameFigure());
+					.getFigureDataBaseIdFigure());
 			return true;
 		}
 		return false;

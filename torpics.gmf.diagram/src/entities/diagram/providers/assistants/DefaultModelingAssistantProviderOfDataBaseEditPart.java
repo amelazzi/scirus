@@ -61,16 +61,16 @@ public class DefaultModelingAssistantProviderOfDataBaseEditPart extends
 	public List<IElementType> doGetRelTypesOnSourceAndTarget(
 			DataBaseEditPart source, IGraphicalEditPart targetEditPart) {
 		List<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof GateWayEditPart) {
+		if (targetEditPart instanceof CapteurEditPart) {
 			types.add(DefaultElementTypes.Link_4001);
 		}
-		if (targetEditPart instanceof CapteurEditPart) {
+		if (targetEditPart instanceof DataBaseEditPart) {
 			types.add(DefaultElementTypes.Link_4001);
 		}
 		if (targetEditPart instanceof CloudEditPart) {
 			types.add(DefaultElementTypes.Link_4001);
 		}
-		if (targetEditPart instanceof DataBaseEditPart) {
+		if (targetEditPart instanceof GateWayEditPart) {
 			types.add(DefaultElementTypes.Link_4001);
 		}
 		if (targetEditPart instanceof EntryFunctionEditPart) {
@@ -98,10 +98,10 @@ public class DefaultModelingAssistantProviderOfDataBaseEditPart extends
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == DefaultElementTypes.Link_4001) {
-			types.add(DefaultElementTypes.GateWay_2001);
-			types.add(DefaultElementTypes.Capteur_2002);
+			types.add(DefaultElementTypes.Capteur_2001);
+			types.add(DefaultElementTypes.DataBase_2002);
 			types.add(DefaultElementTypes.Cloud_2003);
-			types.add(DefaultElementTypes.DataBase_2004);
+			types.add(DefaultElementTypes.GateWay_2004);
 			types.add(DefaultElementTypes.EntryFunction_2005);
 		}
 		return types;
@@ -145,10 +145,10 @@ public class DefaultModelingAssistantProviderOfDataBaseEditPart extends
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == DefaultElementTypes.Link_4001) {
-			types.add(DefaultElementTypes.GateWay_2001);
-			types.add(DefaultElementTypes.Capteur_2002);
+			types.add(DefaultElementTypes.Capteur_2001);
+			types.add(DefaultElementTypes.DataBase_2002);
 			types.add(DefaultElementTypes.Cloud_2003);
-			types.add(DefaultElementTypes.DataBase_2004);
+			types.add(DefaultElementTypes.GateWay_2004);
 			types.add(DefaultElementTypes.EntryFunction_2005);
 		}
 		return types;

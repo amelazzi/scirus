@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="torpics.gmf.diagram/lib"/>
+			<attribute name="ignore_optional_problems" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/commons-codec-1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/commons-logging-1.1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/gson-2.8.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/httpasyncclient-4.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/httpclient-4.3.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/httpcore-4.3.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/httpcore-nio-4.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/httpmime-4.3.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/json-20160212.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/json-parse-1.3.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/json-simple-2.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/mysql-connector-java-3.0.16-ga-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/org.eclipse.paho.client.mqttv3-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/mainpack/unirest-java-1.5.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="output" path="bin"/>

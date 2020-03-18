@@ -208,10 +208,10 @@ public class EntryFunctionTypeEditPart extends CompartmentEditPart implements
 	protected String getLabelText() {
 		String text = null;
 		EObject parserElement = getParserElement();
-		if (parserElement != null && getParser() != null) {
-			text = getParser().getPrintString(
-					new EObjectAdapter(parserElement),
-					getParserOptions().intValue());
+	if (parserElement != null && getParser() != null) {
+			
+		text= parserElement.toString();
+			
 		}
 		if (text == null || text.length() == 0) {
 			text = defaultText;

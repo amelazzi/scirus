@@ -29,15 +29,6 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Link"
-          description="Create new Link">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="Cloud"
           description="Create new Cloud">
         <smallIcon
@@ -58,6 +49,15 @@
           xsi:type="gmftool:CreationTool"
           title="EntryFunction"
           description="Create new EntryFunction">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Link"
+          description="Create new Link">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

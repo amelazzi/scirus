@@ -105,11 +105,71 @@
             xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
+            name="CloudIdFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
             name="CloudNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CloudUrlFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CloudUserNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CloudPwdFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CloudPortFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CloudTypeFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CloudMethodFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CloudAPIKeyFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CloudChannelIDFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="CloudProtocolFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.4"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.5"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.6"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.7"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.8"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.9"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.10"/>
     </descriptors>
     <descriptors
         name="GateWayFigure">
@@ -120,11 +180,17 @@
             xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
+            name="GateWayIdFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
             name="GateWayNameFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="EntryFunctionFigure">
@@ -135,11 +201,35 @@
             xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
+            name="EntryFunctionIdFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
             name="EntryFunctionTypeFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="EntryFunctionThresholdFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="EntryFunctionMetricFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="EntryFunctionPeriodFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.4"/>
     </descriptors>
   </figures>
   <nodes
@@ -162,11 +252,11 @@
       figure="LinkFigure"/>
   <labels
       name="CapteurId"
-      figure="CapteurFigure"/>
-  <labels
-      name="CapteurName"
       figure="CapteurFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels
+      name="CapteurName"
+      figure="CapteurFigure"/>
   <labels
       name="CapteurType"
       figure="CapteurFigure"/>
@@ -206,64 +296,79 @@
       figure="DataBaseFigure"
       accessor="//@figures.0/@descriptors.1/@accessors.7"/>
   <labels
-      name="LinkName"
-      figure="LinkFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
-  <labels
       name="CloudId"
-      figure="CloudFigure"/>
-  <labels
-      name="CloudName"
       figure="CloudFigure"
       accessor="//@figures.0/@descriptors.3/@accessors.0"/>
   <labels
+      name="CloudName"
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.1"/>
+  <labels
       name="CloudUrl"
-      figure="CloudFigure"/>
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.2"/>
   <labels
       name="CloudUserName"
-      figure="CloudFigure"/>
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.3"/>
   <labels
       name="CloudPwd"
-      figure="CloudFigure"/>
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.4"/>
   <labels
       name="CloudPort"
-      figure="CloudFigure"/>
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.5"/>
   <labels
       name="CloudType"
-      figure="CloudFigure"/>
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.6"/>
   <labels
       name="CloudMethod"
-      figure="CloudFigure"/>
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.7"/>
   <labels
       name="CloudAPIKey"
-      figure="CloudFigure"/>
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.8"/>
   <labels
       name="CloudChannelID"
-      figure="CloudFigure"/>
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.9"/>
   <labels
       name="CloudProtocol"
-      figure="CloudFigure"/>
+      figure="CloudFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.10"/>
   <labels
       name="GateWayId"
-      figure="GateWayFigure"/>
-  <labels
-      name="GateWayName"
       figure="GateWayFigure"
       accessor="//@figures.0/@descriptors.4/@accessors.0"/>
   <labels
-      name="EntryFunctionId"
-      figure="EntryFunctionFigure"/>
+      name="GateWayName"
+      figure="GateWayFigure"
+      accessor="//@figures.0/@descriptors.4/@accessors.1"/>
   <labels
-      name="EntryFunctionType"
+      name="EntryFunctionId"
       figure="EntryFunctionFigure"
       accessor="//@figures.0/@descriptors.5/@accessors.0"/>
   <labels
+      name="EntryFunctionType"
+      figure="EntryFunctionFigure"
+      accessor="//@figures.0/@descriptors.5/@accessors.1"/>
+  <labels
       name="EntryFunctionThreshold"
-      figure="EntryFunctionFigure"/>
+      figure="EntryFunctionFigure"
+      accessor="//@figures.0/@descriptors.5/@accessors.2"/>
   <labels
       name="EntryFunctionMetric"
-      figure="EntryFunctionFigure"/>
+      figure="EntryFunctionFigure"
+      accessor="//@figures.0/@descriptors.5/@accessors.3"/>
   <labels
       name="EntryFunctionPeriod"
-      figure="EntryFunctionFigure"/>
+      figure="EntryFunctionFigure"
+      accessor="//@figures.0/@descriptors.5/@accessors.4"/>
+  <labels
+      name="LinkName"
+      figure="LinkFigure"
+      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
 </gmfgraph:Canvas>

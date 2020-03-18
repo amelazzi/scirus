@@ -232,7 +232,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_fJ0qt2K8EeqNbt0OfUkdaA"/>
     </children>
     <element xmi:type="ecore:EClass" href="default.ecore#//EntryFunction"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fJzckWK8EeqNbt0OfUkdaA" x="490" y="80" width="126" height="106"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fJzckWK8EeqNbt0OfUkdaA" x="490" y="80" width="136" height="116"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_lb8JAGK8EeqNbt0OfUkdaA" type="2005" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_lb8wEGK8EeqNbt0OfUkdaA" type="5005"/>

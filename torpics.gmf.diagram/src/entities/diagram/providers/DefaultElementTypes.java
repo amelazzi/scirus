@@ -59,11 +59,11 @@ public class DefaultElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType GateWay_2001 = getElementType("torpics.gmf.diagram.GateWay_2001"); //$NON-NLS-1$
+	public static final IElementType Capteur_2001 = getElementType("torpics.gmf.diagram.Capteur_2001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Capteur_2002 = getElementType("torpics.gmf.diagram.Capteur_2002"); //$NON-NLS-1$
+	public static final IElementType DataBase_2002 = getElementType("torpics.gmf.diagram.DataBase_2002"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -71,7 +71,7 @@ public class DefaultElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType DataBase_2004 = getElementType("torpics.gmf.diagram.DataBase_2004"); //$NON-NLS-1$
+	public static final IElementType GateWay_2004 = getElementType("torpics.gmf.diagram.GateWay_2004"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -121,13 +121,13 @@ public class DefaultElementTypes {
 
 			elements.put(Network_1000, EntitiesPackage.eINSTANCE.getNetwork());
 
-			elements.put(GateWay_2001, EntitiesPackage.eINSTANCE.getGateWay());
+			elements.put(Capteur_2001, EntitiesPackage.eINSTANCE.getCapteur());
 
-			elements.put(Capteur_2002, EntitiesPackage.eINSTANCE.getCapteur());
+			elements.put(DataBase_2002, EntitiesPackage.eINSTANCE.getDataBase());
 
 			elements.put(Cloud_2003, EntitiesPackage.eINSTANCE.getCloud());
 
-			elements.put(DataBase_2004, EntitiesPackage.eINSTANCE.getDataBase());
+			elements.put(GateWay_2004, EntitiesPackage.eINSTANCE.getGateWay());
 
 			elements.put(EntryFunction_2005,
 					EntitiesPackage.eINSTANCE.getEntryFunction());
@@ -151,10 +151,10 @@ public class DefaultElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Network_1000);
-			KNOWN_ELEMENT_TYPES.add(GateWay_2001);
-			KNOWN_ELEMENT_TYPES.add(Capteur_2002);
+			KNOWN_ELEMENT_TYPES.add(Capteur_2001);
+			KNOWN_ELEMENT_TYPES.add(DataBase_2002);
 			KNOWN_ELEMENT_TYPES.add(Cloud_2003);
-			KNOWN_ELEMENT_TYPES.add(DataBase_2004);
+			KNOWN_ELEMENT_TYPES.add(GateWay_2004);
 			KNOWN_ELEMENT_TYPES.add(EntryFunction_2005);
 			KNOWN_ELEMENT_TYPES.add(Link_4001);
 		}
@@ -168,14 +168,14 @@ public class DefaultElementTypes {
 		switch (visualID) {
 		case NetworkEditPart.VISUAL_ID:
 			return Network_1000;
-		case GateWayEditPart.VISUAL_ID:
-			return GateWay_2001;
 		case CapteurEditPart.VISUAL_ID:
-			return Capteur_2002;
+			return Capteur_2001;
+		case DataBaseEditPart.VISUAL_ID:
+			return DataBase_2002;
 		case CloudEditPart.VISUAL_ID:
 			return Cloud_2003;
-		case DataBaseEditPart.VISUAL_ID:
-			return DataBase_2004;
+		case GateWayEditPart.VISUAL_ID:
+			return GateWay_2004;
 		case EntryFunctionEditPart.VISUAL_ID:
 			return EntryFunction_2005;
 		case LinkEditPart.VISUAL_ID:

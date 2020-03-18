@@ -32,7 +32,7 @@ public class GateWayEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2001;
+	public static final int VISUAL_ID = 2004;
 
 	/**
 	 * @generated
@@ -106,7 +106,7 @@ public class GateWayEditPart extends ShapeNodeEditPart {
 	protected boolean addFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof GateWayNameEditPart) {
 			((GateWayNameEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureGateWayNameFigure());
+					.getFigureGateWayIdFigure());
 			return true;
 		}
 		return false;
@@ -251,6 +251,10 @@ public class GateWayEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureGateWayIdFigure;
+		/**
+		 * @generated
+		 */
 		private WrappingLabel fFigureGateWayNameFigure;
 
 		/**
@@ -277,12 +281,25 @@ public class GateWayEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
+			fFigureGateWayIdFigure = new WrappingLabel();
+
+			fFigureGateWayIdFigure.setText("<...>");
+
+			this.add(fFigureGateWayIdFigure);
+
 			fFigureGateWayNameFigure = new WrappingLabel();
 
 			fFigureGateWayNameFigure.setText("<...>");
 
 			this.add(fFigureGateWayNameFigure);
 
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureGateWayIdFigure() {
+			return fFigureGateWayIdFigure;
 		}
 
 		/**

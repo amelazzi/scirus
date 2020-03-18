@@ -252,7 +252,23 @@ public class EntryFunctionEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureEntryFunctionIdFigure;
+		/**
+		 * @generated
+		 */
 		private WrappingLabel fFigureEntryFunctionTypeFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureEntryFunctionThresholdFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureEntryFunctionMetricFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureEntryFunctionPeriodFigure;
 
 		/**
 		 * @generated
@@ -278,12 +294,43 @@ public class EntryFunctionEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
+			fFigureEntryFunctionIdFigure = new WrappingLabel();
+
+			fFigureEntryFunctionIdFigure.setText("<...>");
+
+			this.add(fFigureEntryFunctionIdFigure);
+
 			fFigureEntryFunctionTypeFigure = new WrappingLabel();
 
 			fFigureEntryFunctionTypeFigure.setText("<...>");
 
 			this.add(fFigureEntryFunctionTypeFigure);
 
+			fFigureEntryFunctionThresholdFigure = new WrappingLabel();
+
+			fFigureEntryFunctionThresholdFigure.setText("<...>");
+
+			this.add(fFigureEntryFunctionThresholdFigure);
+
+			fFigureEntryFunctionMetricFigure = new WrappingLabel();
+
+			fFigureEntryFunctionMetricFigure.setText("<...>");
+
+			this.add(fFigureEntryFunctionMetricFigure);
+
+			fFigureEntryFunctionPeriodFigure = new WrappingLabel();
+
+			fFigureEntryFunctionPeriodFigure.setText("<...>");
+
+			this.add(fFigureEntryFunctionPeriodFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureEntryFunctionIdFigure() {
+			return fFigureEntryFunctionIdFigure;
 		}
 
 		/**
@@ -291,6 +338,27 @@ public class EntryFunctionEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureEntryFunctionTypeFigure() {
 			return fFigureEntryFunctionTypeFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureEntryFunctionThresholdFigure() {
+			return fFigureEntryFunctionThresholdFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureEntryFunctionMetricFigure() {
+			return fFigureEntryFunctionMetricFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureEntryFunctionPeriodFigure() {
+			return fFigureEntryFunctionPeriodFigure;
 		}
 
 	}

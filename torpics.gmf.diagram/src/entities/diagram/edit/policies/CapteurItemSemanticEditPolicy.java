@@ -29,7 +29,7 @@ public class CapteurItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	public CapteurItemSemanticEditPolicy() {
-		super(DefaultElementTypes.Capteur_2002);
+		super(DefaultElementTypes.Capteur_2001);
 	}
 
 	/**

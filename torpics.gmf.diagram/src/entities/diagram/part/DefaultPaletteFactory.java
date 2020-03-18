@@ -33,10 +33,10 @@ public class DefaultPaletteFactory {
 		paletteContainer.setId("createEntities1Group"); //$NON-NLS-1$
 		paletteContainer.add(createCapteur1CreationTool());
 		paletteContainer.add(createDataBase2CreationTool());
-		paletteContainer.add(createLink3CreationTool());
-		paletteContainer.add(createCloud4CreationTool());
-		paletteContainer.add(createGateWay5CreationTool());
-		paletteContainer.add(createEntryFunction6CreationTool());
+		paletteContainer.add(createCloud3CreationTool());
+		paletteContainer.add(createGateWay4CreationTool());
+		paletteContainer.add(createEntryFunction5CreationTool());
+		paletteContainer.add(createLink6CreationTool());
 		return paletteContainer;
 	}
 
@@ -47,10 +47,10 @@ public class DefaultPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				Messages.Capteur1CreationTool_title,
 				Messages.Capteur1CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.Capteur_2002));
+				Collections.singletonList(DefaultElementTypes.Capteur_2001));
 		entry.setId("createCapteur1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.Capteur_2002));
+				.getImageDescriptor(DefaultElementTypes.Capteur_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -62,10 +62,10 @@ public class DefaultPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				Messages.DataBase2CreationTool_title,
 				Messages.DataBase2CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.DataBase_2004));
+				Collections.singletonList(DefaultElementTypes.DataBase_2002));
 		entry.setId("createDataBase2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.DataBase_2004));
+				.getImageDescriptor(DefaultElementTypes.DataBase_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -73,27 +73,12 @@ public class DefaultPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createLink3CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
-				Messages.Link3CreationTool_title,
-				Messages.Link3CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.Link_4001));
-		entry.setId("createLink3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.Link_4001));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createCloud4CreationTool() {
+	private ToolEntry createCloud3CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.Cloud4CreationTool_title,
-				Messages.Cloud4CreationTool_desc,
+				Messages.Cloud3CreationTool_title,
+				Messages.Cloud3CreationTool_desc,
 				Collections.singletonList(DefaultElementTypes.Cloud_2003));
-		entry.setId("createCloud4CreationTool"); //$NON-NLS-1$
+		entry.setId("createCloud3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
 				.getImageDescriptor(DefaultElementTypes.Cloud_2003));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -103,14 +88,14 @@ public class DefaultPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createGateWay5CreationTool() {
+	private ToolEntry createGateWay4CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.GateWay5CreationTool_title,
-				Messages.GateWay5CreationTool_desc,
-				Collections.singletonList(DefaultElementTypes.GateWay_2001));
-		entry.setId("createGateWay5CreationTool"); //$NON-NLS-1$
+				Messages.GateWay4CreationTool_title,
+				Messages.GateWay4CreationTool_desc,
+				Collections.singletonList(DefaultElementTypes.GateWay_2004));
+		entry.setId("createGateWay4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
-				.getImageDescriptor(DefaultElementTypes.GateWay_2001));
+				.getImageDescriptor(DefaultElementTypes.GateWay_2004));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -118,15 +103,30 @@ public class DefaultPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createEntryFunction6CreationTool() {
+	private ToolEntry createEntryFunction5CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				Messages.EntryFunction6CreationTool_title,
-				Messages.EntryFunction6CreationTool_desc,
+				Messages.EntryFunction5CreationTool_title,
+				Messages.EntryFunction5CreationTool_desc,
 				Collections
 						.singletonList(DefaultElementTypes.EntryFunction_2005));
-		entry.setId("createEntryFunction6CreationTool"); //$NON-NLS-1$
+		entry.setId("createEntryFunction5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(DefaultElementTypes
 				.getImageDescriptor(DefaultElementTypes.EntryFunction_2005));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createLink6CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
+				Messages.Link6CreationTool_title,
+				Messages.Link6CreationTool_desc,
+				Collections.singletonList(DefaultElementTypes.Link_4001));
+		entry.setId("createLink6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(DefaultElementTypes
+				.getImageDescriptor(DefaultElementTypes.Link_4001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
