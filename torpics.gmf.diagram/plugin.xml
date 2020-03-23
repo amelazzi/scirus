@@ -556,43 +556,7 @@
    </extension>
 
    <!-- optionally, specify keybindings -->
-    <extension
-         point="org.eclipse.ui.commands">
-      <command
-            id="Entities2java"
-            name="Generate java from entities">
-      </command>
-       </extension>
-      
-      <extension
-         point="org.eclipse.ui.handlers">
-      <handler
-            class="mainpack.main"
-            commandId="Entities2java">
-      </handler>
-   </extension>
    
-   <extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            allPopups="false"
-            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
-         <menu
-               id="Entities2java"
-               label="Entities to java">
-            <command
-                  commandId="Entities2java"
-                  style="push">
-            </command>
-         </menu>
-      </menuContribution>
-   </extension>
-   
-   
-      
-      
-      
-      
    <extension
          point="org.eclipse.ui.commands">
       <command
@@ -613,8 +577,8 @@
             allPopups="false"
             locationURI="menu:org.eclipse.ui.main.menu?after=additions">
          <menu
-               id="processModel"
-               label="Process Model">
+               id="Entities to java"
+               label="Generation du code">
             <command
                   commandId="torpics.gmf.diagram.main"
                   style="push">
