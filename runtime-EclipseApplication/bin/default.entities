@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<torpicsEMF:Network xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:torpicsEMF="torpics">
+  <objectsList xsi:type="torpicsEMF:Capteur" id="1" name="C1" sendTime="10"/>
+  <objectsList xsi:type="torpicsEMF:Capteur" id="2" name="C2" type="Temperature" sendTime="11"/>
+  <objectsList xsi:type="torpicsEMF:Cloud" name="CLOUD1" url="https://api.thingspeak.com" userName="root" pwd="root" APIKey="8XH6AGY8U9AROBQ2" channelID="99740"/>
+  <objectsList xsi:type="torpicsEMF:EntryFunction" type="Min" threshold="8" metric="Temperature" period="100"/>
+  <objectsList xsi:type="torpicsEMF:DataBase" name="scirus" url="localhost" userName="root" pwd="root" port="3309"/>
+  <objectsList xsi:type="torpicsEMF:EntryFunction" id="5" threshold="5" metric="Temperature" period="100"/>
+  <objectsList xsi:type="torpicsEMF:DataBase" id="11" name="scirus_global" url="localhost" userName="root" pwd="root" port="3309"/>
+  <linkList source="1" destination="//@objectsList.4"/>
+  <linkList source="//@objectsList.4" destination="5"/>
+  <linkList source="2" destination="//@objectsList.2"/>
+  <linkList source="//@objectsList.2" destination="//@objectsList.3"/>
+  <linkList name="linkee" source="5" destination="11"/>
+</torpicsEMF:Network>
